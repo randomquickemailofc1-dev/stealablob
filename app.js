@@ -253,7 +253,7 @@
         + `<div><span>Sells for</span><b>${money(Math.floor(b.p * D.sell))}</b></div></div>`
         + `<h3 class="sh-h">How to get it</h3><ul class="how">${how}</ul>`
         + `<h3 class="sh-h">Value with mutations and stars</h3><table class="mx"><thead>${head}</thead><tbody>${rows}</tbody></table>`
-        + `<button class="btn sh-calc" type="button">Open in the calculator</button>`;
+        + `<div class="sh-links"><a class="btn sh-page" href="${esc(b.u)}">Open ${esc(b.n)}'s page</a><button class="btn sh-calc" type="button">Open in the calculator</button></div>`;
       body.querySelector('.sh-close').addEventListener('click', () => sheet.close());
       body.querySelector('.sh-calc').addEventListener('click', () => {
         cBlob.value = b.id; calc(); sheet.close();
@@ -272,15 +272,134 @@
         if (open(c.dataset.id)) { e.preventDefault(); history.replaceState(null, '', '#' + c.dataset.id); }
       });
     }
-    const fromHash = () => { const id = decodeURIComponent(location.hash.slice(1)); if (byId[id]) open(id); };
+    const fromHash = () => {
+      const h = decodeURIComponent(location.hash.slice(1));
+      const calcId = h.startsWith('calc=') ? h.slice(5) : null;
+      if (calcId && byId[calcId]) { // values.html#calc=KingWobble (links from the blob pages)
+        cBlob.value = calcId; calc();
+        $('#calc').scrollIntoView();
+        return;
+      }
+      if (byId[h]) open(h);
+    };
     window.addEventListener('hashchange', fromHash);
     fromHash();
+  }
+
+  // ---------------------------------------------------------- trade calculator
+  function setupTrade(T) {
+    const byId = Object.fromEntries(T.blobs.map((b) => [b.id, b]));
+    const mutBy = Object.fromEntries(T.muts.map((m) => [m.n, m]));
+    const SIDES = ['give', 'get'];
+    const state = { give: [], get: [] };
+    const maxLv = T.levels.length;
+    const mult = (n) => String(+n.toFixed(4));
+    // #give=KingWobble.Gold.2,CloudPuff&get=VoidGobbler  (blob.mutation.stars, shareable)
+    function parse() {
+      const h = new URLSearchParams(location.hash.slice(1));
+      for (const side of SIDES) {
+        state[side] = (h.get(side) || '').split(',').filter(Boolean).map((tok) => {
+          const [id, m = 'None', l = '1'] = tok.split('.');
+          return byId[id] ? { id, m: mutBy[m] ? m : 'None', l: Math.min(Math.max(parseInt(l, 10) || 1, 1), maxLv) } : null;
+        }).filter(Boolean).slice(0, T.max);
+      }
+    }
+    function serialize() {
+      return SIDES.filter((s) => state[s].length).map((s) => s + '=' + state[s].map((x) =>
+        x.id + (x.m !== 'None' || x.l > 1 ? '.' + x.m + (x.l > 1 ? '.' + x.l : '') : '')).join(',')).join('&');
+    }
+    const val = (x) => byId[x.id].p * mutBy[x.m].m * T.levels[x.l - 1];
+    const inc = (x) => byId[x.id].i * mutBy[x.m].m * T.levels[x.l - 1];
+    const sum = (side, f) => state[side].reduce((a, x) => a + f(x), 0);
+    const mutOpts = (sel) => T.muts.map((m) => `<option value="${esc(m.n)}"${m.n === sel ? ' selected' : ''}>${esc(m.ic ? m.ic + ' ' : '')}${esc(m.l)} x${mult(m.m)}</option>`).join('');
+    const lvOpts = (sel) => T.levels.map((lm, k) => `<option value="${k + 1}"${k + 1 === sel ? ' selected' : ''}>${'★'.repeat(k + 1)} x${mult(lm)}</option>`).join('');
+    function item(side, x, k) {
+      const b = byId[x.id], r = T.rarities[b.r];
+      return `<li class="t-item" style="--rc:${r.a}"><img class="ti-img" src="${esc(b.img)}" alt="" width="52" height="52">`
+        + `<a class="ti-name" href="${esc(b.u)}">${esc(b.n)}</a><b class="v ti-v">${money(val(x))}</b>`
+        + `<button type="button" class="ti-x" data-side="${side}" data-k="${k}" aria-label="Remove ${esc(b.n)}">✕</button>`
+        + `<div class="ti-sel"><label><span class="vh">Mutation</span><select data-side="${side}" data-k="${k}" data-f="m">${mutOpts(x.m)}</select></label>`
+        + `<label><span class="vh">Stars</span><select data-side="${side}" data-k="${k}" data-f="l">${lvOpts(x.l)}</select></label></div></li>`;
+    }
+    function verdict() {
+      const g = sum('give', val), t = sum('get', val);
+      const box = $('#verdict'), vd = box.querySelector('.vd'), vt = box.querySelector('.vt');
+      box.className = 'verdict';
+      if (!state.give.length || !state.get.length) { vd.textContent = '?'; vt.textContent = 'Add blobs to both sides'; return; }
+      const d = (t - g) / Math.max(t, g);
+      const pct = g > 0 ? Math.round((t / g - 1) * 100) : 0;
+      const sign = (n) => (n > 0 ? '+' : n < 0 ? '−' : '');
+      const pctTxt = `${sign(pct)}${Math.abs(pct)}%`;
+      const di = sum('get', inc) - sum('give', inc);
+      const incTxt = `Income ${sign(di)}${money(Math.abs(di))}/s`;
+      if (Math.abs(d) <= T.fair) { box.classList.add('vd-f'); vd.textContent = 'F'; vt.textContent = `Fair: ${sign(t - g)}${money(Math.abs(t - g))} (${pctTxt}). ${incTxt}`; }
+      else if (d > 0) { box.classList.add('vd-w'); vd.textContent = 'W'; vt.textContent = `Win: you get ${money(t - g)} more (${pctTxt}). ${incTxt}`; }
+      else { box.classList.add('vd-l'); vd.textContent = 'L'; vt.textContent = `Loss: you get ${money(g - t)} less (${pctTxt}). ${incTxt}`; }
+    }
+    function render() {
+      for (const side of SIDES) {
+        $('#' + side + '-items').innerHTML = state[side].length ? state[side].map((x, k) => item(side, x, k)).join('') : '<li class="t-empty">No blobs yet</li>';
+        $('#' + side + '-v').textContent = money(sum(side, val));
+        $('#' + side + '-i').textContent = money(sum(side, inc)) + '/s';
+        const add = $(`.t-add[data-side="${side}"]`);
+        add.disabled = state[side].length >= T.max;
+        add.textContent = add.disabled ? `Max ${T.max} blobs` : '+ Add a blob';
+      }
+      verdict();
+      const h = serialize();
+      history.replaceState(null, '', location.pathname + location.search + (h ? '#' + h : ''));
+    }
+    const grid = $('.trade-grid');
+    grid.addEventListener('change', (e) => {
+      const t = e.target; if (!t.dataset.f) return;
+      const x = state[t.dataset.side][+t.dataset.k]; if (!x) return;
+      if (t.dataset.f === 'm') x.m = t.value; else x.l = +t.value;
+      render();
+    });
+    grid.addEventListener('click', (e) => {
+      const x = e.target.closest('.ti-x');
+      if (x) { state[x.dataset.side].splice(+x.dataset.k, 1); render(); return; }
+      const add = e.target.closest('.t-add');
+      if (add && !add.disabled) openPicker(add.dataset.side);
+    });
+    // picker
+    const picker = $('#picker'), pq = $('#pk-q'), list = $('#pk-list');
+    let pickSide = 'give';
+    list.innerHTML = T.blobs.map((b) => { const r = T.rarities[b.r];
+      return `<button type="button" class="pk-b" data-id="${esc(b.id)}" style="--rc:${r.a}"><img src="${esc(b.img)}" alt="" width="44" height="44" loading="lazy" decoding="async">`
+        + `<span class="pk-n">${esc(b.n)}<span class="pill" style="--pc:${r.c};--pt:${r.t};--pa:${r.a}">${esc(b.r)}</span></span><b class="v">${money(b.p)}</b></button>`; }).join('');
+    const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    pq.addEventListener('input', () => { const q = norm(pq.value); for (const b of $$('.pk-b', list)) b.hidden = !!q && !norm(byId[b.dataset.id].n + byId[b.dataset.id].r).includes(q); });
+    function openPicker(side) {
+      pickSide = side; pq.value = ''; for (const b of $$('.pk-b', list)) b.hidden = false;
+      $('#pk-h').textContent = side === 'give' ? 'Add a blob you give' : 'Add a blob you get';
+      if (picker.showModal) picker.showModal(); else picker.setAttribute('open', '');
+      list.scrollTop = 0;
+      if (matchMedia('(hover: hover)').matches) pq.focus();
+    }
+    list.addEventListener('click', (e) => {
+      const b = e.target.closest('.pk-b'); if (!b) return;
+      if (state[pickSide].length < T.max) state[pickSide].push({ id: b.dataset.id, m: 'None', l: 1 });
+      picker.close(); render();
+    });
+    $('#pk-close').addEventListener('click', () => picker.close());
+    picker.addEventListener('click', (e) => { if (e.target === picker) picker.close(); });
+    $('#t-swap').addEventListener('click', () => { [state.give, state.get] = [state.get, state.give]; render(); });
+    $('#t-clear').addEventListener('click', () => { state.give = []; state.get = []; render(); });
+    $('#t-share').addEventListener('click', async (e) => {
+      const btn = e.currentTarget; const ok = await copyText(location.href);
+      const old = btn.lastChild.textContent; btn.lastChild.textContent = ok ? 'Link copied!' : 'Copy the address bar';
+      setTimeout(() => { btn.lastChild.textContent = old; }, 1600);
+    });
+    window.addEventListener('hashchange', () => { parse(); render(); });
+    parse(); render();
   }
 
   // ---------------------------------------------------------- start
   localize();
   if (DATA.live) setupHome(DATA.live);
   if (DATA.blobs) setupValues(DATA);
+  if (DATA.trade) setupTrade(DATA.trade);
   tick();
   if ($('.cd[data-until]') || hourly) setInterval(tick, 1000);
 })();

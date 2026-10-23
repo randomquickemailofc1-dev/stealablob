@@ -1,0 +1,28 @@
+{
+ "name": "Steal a Blob",
+ "short_name": "Steal a Blob",
+ "description": "Play Steal a Blob on Roblox: every working code, the full blob value list with mutations and a value calculator, the next Blob Friday drop and the current event.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#1d0d3d",
+ "theme_color": "#2a1257",
+ "icons": [
+  {
+   "src": "img/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "img/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "img/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
