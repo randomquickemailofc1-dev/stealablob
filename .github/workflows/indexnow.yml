@@ -1,0 +1,30 @@
+name: Tell Bing about updates (IndexNow)
+# After every push, sends all URLs in sitemap.xml to IndexNow (Bing, Yandex, Seznam, Naver share it).
+# No account needed: the key file b913c947b081546dd5dbf30011518825.txt at the site root proves we own stealablob.com.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for GitHub Pages to publish
+        run: sleep 90
+      - name: Submit URLs
+        run: |
+          set -e
+          KEY=$(ls *.txt | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')
+          [ -n "$KEY" ] || { echo "::error::IndexNow key file missing"; exit 1; }
+          python3 - "$KEY" <<'PY'
+          import json, re, sys, urllib.request
+          key = sys.argv[1]
+          urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml").read())
+          body = json.dumps({"host": "stealablob.com", "key": key, "keyLocation": f"https://stealablob.com/{key}.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+          try:
+              r = urllib.request.urlopen(req, timeout=30); print(f"::notice::IndexNow HTTP {r.status} for {len(urls)} URLs")
+          except urllib.error.HTTPError as e:
+              print(f"::warning::IndexNow HTTP {e.code}: {e.read()[:300]!r}")
+          PY
