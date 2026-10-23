@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stealablob.com/sitemap.xml
