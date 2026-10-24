@@ -497,3 +497,34 @@ b, strong { font-weight: normal; color: #fff; }
 .nf .h1 { font-size: clamp(40px, 12vw, 64px); }
 .nf-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 22px; }
 .nf-links .btn-play { grid-column: 1 / -1; }
+
+/* ------------------------------------------------------------ wallpapers */
+.wallpage { max-width: 760px; }
+.wp-tip { margin: 14px 0 0; padding: 10px 12px; max-width: 62ch; font-size: 15px; color: var(--text); background: var(--jelly); border: 2px solid var(--ink); border-radius: 12px; }
+.wp-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+@media (min-width: 600px) { .wp-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 20px; } }
+.wp { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+/* the preview sits in a phone (or monitor) frame: dark bezel, ink outline, hard shadow */
+.wp-shot { position: relative; display: block; padding: 6px; border-radius: 26px; background: #0f0720; border: 3px solid var(--ink);
+  box-shadow: 0 5px 0 var(--ink), inset 0 0 0 2px rgba(255, 255, 255, .09); transition: transform .08s, box-shadow .08s; }
+.wp-shot img { width: 100%; border-radius: 19px; background: var(--night-2); }
+.wp-phone .wp-shot img { aspect-ratio: 9 / 20; }
+.wp-phone .wp-shot::before { content: ""; position: absolute; z-index: 1; top: 13px; left: 50%; width: 27%; height: 9px; translate: -50% 0; border-radius: 99px; background: #0f0720; }
+.wp-shot:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--ink), inset 0 0 0 2px rgba(255, 255, 255, .09); }
+@media (hover: hover) { .wp-shot:hover { transform: translateY(-3px); box-shadow: 0 8px 0 var(--ink), inset 0 0 0 2px rgba(255, 255, 255, .09); } }
+.wp-info { flex: 1; }
+.wp-name { margin: 0; padding-top: 2px; font-family: var(--display); font-weight: normal; text-transform: uppercase; font-size: 19px; line-height: 1.05; color: #fff; }
+.wp-meta { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+.btn-dl { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px 8px; border-radius: 14px; background: var(--sky);
+  border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink); color: #fff; text-decoration: none; font-family: var(--display); font-size: 18px;
+  text-transform: uppercase; letter-spacing: .02em; line-height: 1;
+  text-shadow: -1.5px -1.5px 0 var(--ink), 1.5px -1.5px 0 var(--ink), -1.5px 1.5px 0 var(--ink), 1.5px 1.5px 0 var(--ink), 0 3px 0 var(--ink); }
+.btn-dl svg { width: 20px; height: 20px; flex: none; margin-top: -3px; filter: drop-shadow(0 2px 0 var(--ink)); }
+.btn-dl:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+/* PC: one wide monitor, name on the left and the button on the right */
+.wp-grid-pc { grid-template-columns: minmax(0, 1fr); }  /* (after .wp-grid's media rule, so it wins) */
+.wp-pc { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 14px 12px; }
+.wp-pc .wp-shot { grid-column: 1 / -1; border-radius: 16px; }
+.wp-pc .wp-shot img { aspect-ratio: 16 / 9; border-radius: 9px; }
+.wp-pc .wp-shot::before { content: ""; position: absolute; top: 1px; left: 50%; width: 4px; height: 4px; translate: -50% 0; border-radius: 50%; background: #3a2a5c; }
+.foot-links [aria-current] { color: var(--gold); }
