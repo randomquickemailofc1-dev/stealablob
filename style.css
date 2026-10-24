@@ -160,6 +160,10 @@ b, strong { font-weight: normal; color: #fff; }
 .boosts li { padding: 4px 10px 3px; border-radius: 10px; background: var(--night-2); border: 2px solid var(--ink); font-size: 14px; color: var(--muted); }
 .boosts b { color: var(--gold); }
 .party.is-live { border-color: var(--pink); }
+.galaxy { background: linear-gradient(160deg, #2c2470 0%, var(--jelly) 72%); }
+.galaxy.is-live { border-color: #7d70ff; box-shadow: 0 5px 0 var(--ink), 0 0 20px rgba(125, 112, 255, .55); }
+.live-card.daily { border-color: var(--accent, var(--ink)); box-shadow: 0 5px 0 var(--ink), inset 0 0 0 2px var(--ink); }
+.daily .dn { margin-top: 12px; color: var(--accent, #fff); }
 .hourly { margin: 12px 0 0; padding-top: 12px; border-top: 2px dashed var(--line); font-size: 14px; color: var(--muted); }
 .hourly b { color: var(--gold); }
 

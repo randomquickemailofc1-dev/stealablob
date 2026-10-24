@@ -70,6 +70,34 @@
     if (flipped && onFlip) onFlip();
   }
 
+  // ---------------------------------------------------------- ☀️ Mutation of the Day
+  // The SAME rule as Config.dailyMutationOn in the game (src/shared/Config.luau): cycles of
+  // pool.length days, each a seeded shuffle (an LCG that stays exact in doubles), and a cycle
+  // never starts with the mutation the previous one ended on. checks.py runs exactly the code
+  // between the markers in node and compares 60 days with the game's own answers.
+  // @daily-rule-begin
+  function dailyMutationOn(day, rule) {
+    const pool = rule.pool, n = pool.length;
+    const cycle = (c) => {
+      const p = pool.slice();
+      let x = ((c * 7919 + rule.seed) % 2147483646) + 1;
+      for (let i = n; i >= 2; i--) {
+        x = (x * 48271) % 2147483647;
+        const j = x % i;
+        const t = p[i - 1]; p[i - 1] = p[j]; p[j] = t;
+      }
+      return p;
+    };
+    const c = Math.floor(day / n);
+    const cur = cycle(c);
+    if (n >= 3) {
+      const prev = cycle(c - 1);
+      if (cur[0] === prev[n - 1]) { const t = cur[0]; cur[0] = cur[1]; cur[1] = t; }
+    }
+    return cur[((day % n) + n) % n];
+  }
+  // @daily-rule-end
+
   // ---------------------------------------------------------- home: live cards
   let hourly = null;
   function setupHome(live) {
@@ -109,14 +137,29 @@
       if (!recent && !next) html += '<p class="lc-when">The next drop will be announced in the Discord.</p>';
       c.innerHTML = html;
     }
-    function partyCard() {
-      const c = card('party-card'); const p = live.party; if (!c || !p) return;
+    // weekly events (Blob Party, 🌌 Galaxy Hour): seconds after Thursday 00:00 UTC, like the game
+    function weeklyCard(id, whenId, p) {
+      const c = card(id); if (!c || !p) return;
       const t = now(), week = 7 * 86400;
       const start = t - ((((t - p.offset) % week) + week) % week);
       const on = t < start + p.dur;
       c.classList.toggle('is-live', on);
-      const w = card('party-when');
+      const w = card(whenId);
       if (w) w.innerHTML = on ? `<b class="tag-new">LIVE NOW</b> ends in <b class="cd" data-until="${start + p.dur}"></b>` : `Starts in <b class="cd" data-until="${start + week}"></b>`;
+    }
+    const partyCard = () => weeklyCard('party-card', 'party-when', live.party);
+    const galaxyCard = () => weeklyCard('galaxy-card', 'galaxy-when', live.galaxy);
+    function dailyCard() {
+      const c = card('daily-card'); const r = live.daily; if (!c || !r || !r.pool || !r.pool.length) return;
+      const day = Math.floor(now() / 86400);
+      const m = dailyMutationOn(day, r), next = dailyMutationOn(day + 1, r);
+      const info = r.muts[m] || {}, ninfo = r.muts[next] || {};
+      if (info.color) c.style.setProperty('--accent', info.color);
+      const nameEl = card('daily-name'), oddsEl = card('daily-odds'), whenEl = card('daily-when');
+      if (nameEl) nameEl.textContent = `${info.icon || ''} ${mult(r.mult)}x ${m}`;
+      // it's rolled with 2x its chance and nothing rarer changes, so its real odds are exactly 2x
+      if (oddsEl) oddsEl.textContent = info.odds ? `1 in ${commas(Math.round(1 / (info.odds * r.mult)))} today (normally 1 in ${commas(Math.round(1 / info.odds))})` : '';
+      if (whenEl) whenEl.innerHTML = `Tomorrow: ${esc(ninfo.icon || '')} <b>${esc(next)}</b>, in <b class="cd" data-until="${(day + 1) * 86400}"></b>`;
     }
     const h = live.hourly, hEl = card('hourly');
     if (h && hEl && h.events.length) {
@@ -132,7 +175,7 @@
         }
       };
     }
-    const all = () => { seasonCard(); dropCard(); partyCard(); localize(); tick(); };
+    const all = () => { seasonCard(); dropCard(); partyCard(); galaxyCard(); dailyCard(); localize(); tick(); };
     onFlip = all;
     all();
   }
