@@ -1,7 +1,7 @@
 {
  "name": "Steal a Blob",
  "short_name": "Steal a Blob",
- "description": "Play Steal a Blob on Roblox: every working code, the full blob value list with mutations and a value calculator, the next Blob Friday drop and the current event.",
+ "description": "Steal a Blob on Roblox: every working code, the blob value list and calculator, the tier list, mutation odds, the next Blob Friday drop and live events.",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",

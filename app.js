@@ -58,8 +58,20 @@
     }
   }
   let onFlip = null; // called when a countdown reaches zero (an event starts or ends)
+  // repeating events on the guide pages (Golden Hour, Blob Party, Galaxy Hour):
+  // <b class="rc" data-period="604800" data-offset="320400" data-dur="3600"> (offset from 00:00 UTC Thursday Jan 1 1970, like the game)
+  function recurring(n) {
+    for (const el of $$('.rc[data-period]')) {
+      const p = +el.dataset.period, off = +el.dataset.offset, dur = +el.dataset.dur;
+      const start = n - ((((n - off) % p) + p) % p);
+      const on = n < start + dur;
+      el.classList.toggle('on', on);
+      el.textContent = on ? `LIVE NOW, ${left(start + dur - n)} left` : `in ${left(start + p - n)}`;
+    }
+  }
   function tick() {
     const n = now();
+    recurring(n);
     let flipped = false;
     for (const c of $$('.cd[data-until]')) {
       const s = +c.dataset.until - n;
@@ -205,10 +217,7 @@
     });
   }
 
-  // in-app browsers (TikTok, Instagram...) often can't open the Roblox app
-  if (/TikTok|musical_ly|Bytedance|Instagram|FBAN|FBAV|Snapchat/i.test(navigator.userAgent)) {
-    const h = $('#inapp'); if (h) h.hidden = false;
-  }
+  // (in-app browsers: the "Open in browser" hint and the ?ref= Play links are handled by the inline script in every page)
 
   // ---------------------------------------------------------- values page
   function setupValues(D) {
@@ -444,5 +453,5 @@
   if (DATA.blobs) setupValues(DATA);
   if (DATA.trade) setupTrade(DATA.trade);
   tick();
-  if ($('.cd[data-until]') || hourly) setInterval(tick, 1000);
+  if ($('.cd[data-until]') || $('.rc[data-period]') || hourly) setInterval(tick, 1000);
 })();
