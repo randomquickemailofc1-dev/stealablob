@@ -649,3 +649,8 @@ b, strong { font-weight: normal; color: #fff; }
 .tbl .under small { font-size: 12px; }
 @media (max-width: 599px) { .tbl .under { margin-left: 38px; } }
 .tbl-muts th[scope="row"] { min-width: 150px; }
+
+/* 🧮 rebirth planner (guide.html) */
+.rb-plan { margin-top: 18px; padding: 16px; border-radius: 18px; border: 3px solid var(--ink); background: var(--jelly); }
+.rb-plan .fld input { width: 100%; height: 46px; padding: 0 14px; border-radius: 14px; border: 3px solid var(--ink); background: var(--bg, #1d1238); color: var(--text); font-size: 16px; }
+.rb-out { margin: 6px 0 0; font-weight: 700; color: var(--gold, #ffd34d); }

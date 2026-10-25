@@ -447,11 +447,47 @@
     parse(); render();
   }
 
+  // ---------------------------------------------------------- 🧮 rebirth planner (guide.html)
+  // "2.5M" / "1,200" / "$40k" -> a number (NaN = not one)
+  function parseAmount(s) {
+    const m = String(s || '').trim().replace(/[$,\s]/g, '').match(/^(\d*\.?\d+)([a-z]*)$/i);
+    if (!m) return NaN;
+    const i = SUF.findIndex((x) => x.toLowerCase() === m[2].toLowerCase());
+    return i < 0 ? NaN : parseFloat(m[1]) * Math.pow(1000, i);
+  }
+  function setupRebirth(R) {
+    const n = $('#rb-n'), cash = $('#rb-cash'), inc = $('#rb-inc'), out = $('#rb-out');
+    if (!n || !out) return;
+    function dur(sec) {
+      if (sec < 90) return `${Math.ceil(sec)} seconds`;
+      if (sec < 5400) return `${Math.ceil(sec / 60)} minutes`;
+      if (sec < 172800) return `${(Math.round(sec / 360) / 10)} hours`;
+      return `${Math.round(sec / 8640) / 10} days`;
+    }
+    function calc() {
+      const r = +n.value || 0;
+      const cost = R.costs[r];
+      if (cost === undefined) { out.textContent = 'You have every rebirth!'; return; }
+      const have = parseAmount(cash.value || '0'), per = parseAmount(inc.value || '0');
+      const bonus = Math.round(R.bonus * (r + 1) * 100);
+      let text = `Rebirth ${r + 1} costs ${money(cost)} and takes you to +${bonus}% income forever. `;
+      if (isNaN(have) || isNaN(per)) { out.textContent = text + 'Type numbers like 2.5M or 40K.'; return; }
+      const need = cost - have;
+      if (need <= 0) text += 'You can rebirth NOW!';
+      else if (per <= 0) text += `You need ${money(need)} more. Type your income to see how long that takes.`;
+      else text += `You need ${money(need)} more: about ${dur(need / per)} at ${money(per)}/s (half that with a 2x cash boost).`;
+      out.textContent = text;
+    }
+    for (const el of [n, cash, inc]) el.addEventListener('input', calc);
+    calc();
+  }
+
   // ---------------------------------------------------------- start
   localize();
   if (DATA.live) setupHome(DATA.live);
   if (DATA.blobs) setupValues(DATA);
   if (DATA.trade) setupTrade(DATA.trade);
+  if (DATA.rebirth) setupRebirth(DATA.rebirth);
   tick();
   if ($('.cd[data-until]') || $('.rc[data-period]') || hourly) setInterval(tick, 1000);
 })();
