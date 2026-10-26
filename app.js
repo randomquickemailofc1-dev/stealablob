@@ -664,6 +664,30 @@
     ask();
   }
 
+  // ---------------------------------------------------------- 👤 player pages: share button + the players.html search
+  for (const b of $$('[data-share]')) {
+    b.addEventListener('click', async () => {
+      const url = b.dataset.url || `${location.origin}${location.pathname.replace(/\.html$/, '')}`;
+      const text = b.dataset.text || document.title;
+      if (navigator.share) {
+        try { await navigator.share({ title: document.title, text, url }); return; } catch (e) { /* cancelled: copy instead */ }
+      }
+      const ok = await copyText(url);
+      const label = b.querySelector('span'); const old = label.textContent;
+      label.textContent = ok ? 'Link copied!' : 'Copy failed'; setTimeout(() => { label.textContent = old; }, 1600);
+    });
+  }
+  const plq = $('#pl-q');
+  if (plq) {
+    const rows = $$('#pl-grid > li'), none = $('#pl-none');
+    plq.addEventListener('input', () => {
+      const q = plq.value.trim().toLowerCase().replace(/^@/, '');
+      let shown = 0;
+      for (const li of rows) { const hit = !q || li.dataset.q.includes(q); li.hidden = !hit; if (hit) shown += 1; }
+      none.hidden = shown > 0;
+    });
+  }
+
   // ---------------------------------------------------------- start
   localize();
   if (DATA.live) setupHome(DATA.live);
