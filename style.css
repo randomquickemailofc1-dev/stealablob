@@ -698,3 +698,6 @@ b, strong { font-weight: normal; color: #fff; }
 .es-bars li b { text-align: right; font-weight: normal; }
 .es-h3 { margin: 14px 0 8px; font-weight: normal; font-size: 18px; }
 .es-best { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* 📅 home: add the weekly events to a calendar (events.ics) */
+.cal-link { margin: 14px 0 0; text-align: center; }

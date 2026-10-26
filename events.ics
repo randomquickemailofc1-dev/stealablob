@@ -1,0 +1,50 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//stealablob.com//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Steal a Blob events
+BEGIN:VEVENT
+UID:blobfriday@stealablob.com
+DTSTAMP:20261026T073627Z
+DTSTART:20261030T160000Z
+DTEND:20261030T170000Z
+SUMMARY:🆕 Blob Friday: a new blob drops in Steal a Blob
+DESCRIPTION:A new blob joins the Blob Road every Friday at 16:00 UTC. The Weekend Steal Contest starts too. Play: https://stealablob.com/
+RRULE:FREQ=WEEKLY
+END:VEVENT
+BEGIN:VEVENT
+UID:blobparty@stealablob.com
+DTSTAMP:20261026T073627Z
+DTSTART:20261031T160000Z
+DTEND:20261031T170000Z
+SUMMARY:🎉 Blob Party in Steal a Blob
+DESCRIPTION:3x luck\, 2x cash and rare blob drops for an hour. Play: https://stealablob.com/
+RRULE:FREQ=WEEKLY
+END:VEVENT
+BEGIN:VEVENT
+UID:galaxyhour@stealablob.com
+DTSTAMP:20261026T073627Z
+DTSTART:20261101T170000Z
+DTEND:20261101T180000Z
+SUMMARY:🌌 Galaxy Hour in Steal a Blob
+DESCRIPTION:5x Galaxy mutation chance for an hour. Play: https://stealablob.com/
+RRULE:FREQ=WEEKLY
+END:VEVENT
+BEGIN:VEVENT
+UID:season-halloween-end@stealablob.com
+DTSTAMP:20261026T073627Z
+DTSTART:20261103T000000Z
+DTEND:20261104T000000Z
+SUMMARY:🎃 Last day of the Halloween season in Steal a Blob
+DESCRIPTION:The LIMITED Spooky blobs leave the Blob Road tomorrow. Play: https://stealablob.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:season-winter@stealablob.com
+DTSTAMP:20261026T073627Z
+DTSTART:20261104T000000Z
+DTEND:20261104T010000Z
+SUMMARY:❄️ Winter season starts in Steal a Blob
+DESCRIPTION:LIMITED Winter blobs on the Blob Road until Jan 7. Play: https://stealablob.com/
+END:VEVENT
+END:VCALENDAR
