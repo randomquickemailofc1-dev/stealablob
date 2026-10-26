@@ -119,9 +119,14 @@
         const t = text.value.trim().slice(0, 500);
         if (t) body.text = t;
         let status = 0;
+        let wait = 0;
         try {
           const r = await fetch(api + '/site/feedback', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), credentials: 'omit' });
           status = r.status;
+          if (status === 429) {
+            const j = await r.json().catch(() => null);
+            wait = Number((j && j.retryAfter) || r.headers.get('Retry-After')) || 0;
+          }
         } catch (err) { status = 0; }
         busy = false; send.disabled = false;
         if (status >= 200 && status < 300) {
@@ -129,7 +134,9 @@
           lock(value);
           msg.textContent = t ? 'Thanks! The team reads every comment.' : 'Thanks for rating!';
         } else if (status === 429) {
-          msg.textContent = 'Too many ratings from here right now. Try again later.';
+          msg.textContent = wait > 0 && wait < 120 ? `Slow down a little! Try again in ${Math.ceil(wait)} s.`
+            : wait >= 120 ? `That's a lot of ratings from here. Try again in ${Math.ceil(wait / 60)} min.`
+            : 'Too many ratings from here right now. Try again later.';
         } else if (status === 400 || status === 413) {
           msg.textContent = "That didn't go through. Try a shorter comment.";
         } else if (status === 503) {
