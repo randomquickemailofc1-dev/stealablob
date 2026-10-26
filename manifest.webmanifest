@@ -7,6 +7,43 @@
  "display": "standalone",
  "background_color": "#1d0d3d",
  "theme_color": "#2a1257",
+ "id": "/",
+ "categories": [
+  "games",
+  "entertainment"
+ ],
+ "shortcuts": [
+  {
+   "name": "Codes",
+   "url": "codes.html",
+   "icons": [
+    {
+     "src": "img/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Blob values",
+   "url": "values.html",
+   "icons": [
+    {
+     "src": "img/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Events",
+   "url": "server-events.html",
+   "icons": [
+    {
+     "src": "img/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ],
  "icons": [
   {
    "src": "img/icon-192.png",

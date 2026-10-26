@@ -112,6 +112,13 @@ b, strong { font-weight: normal; color: #fff; }
 
 .foot { max-width: 1180px; margin: 48px auto 0; padding: 22px 16px 28px; color: var(--muted); font-size: 14px; text-align: center; border-top: 2px solid var(--hair); }
 .foot p { margin: 4px 0; }
+/* 📲 Get the app (site.js setupApp: Android = install prompt, iPhone = the Add to Home Screen hint) */
+.get-app { margin: 10px 0 14px; }
+.get-app[hidden], .app-hint[hidden] { display: none; }
+.app-btn { font: inherit; font-weight: 700; color: var(--ink); background: var(--gold); border: 3px solid var(--ink); border-radius: 999px;
+  padding: 9px 18px; cursor: pointer; box-shadow: 0 3px 0 var(--ink); }
+.app-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--ink); }
+.app-hint { display: block; margin-top: 8px; color: var(--text, #fff); }
 .foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; margin: 0 auto 14px; max-width: 640px; }
 .foot a { color: var(--text); }
 

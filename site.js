@@ -157,6 +157,34 @@
     });
   }
 
+  // 📲 the app: register the service worker; show "Get the app" (Android/Chrome = the real install prompt,
+  // iPhone = how to Add to Home Screen); hidden once installed / opened as the app
+  function setupApp() {
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+    const box = $('.get-app'), btn = $('.app-btn'), hint = $('.app-hint');
+    if (!box || !btn) return;
+    const standalone = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+    if (standalone) return;
+    const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    let deferred = null;
+    window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferred = e; box.hidden = false; });
+    window.addEventListener('appinstalled', () => { box.hidden = true; });
+    if (ios) box.hidden = false;
+    btn.addEventListener('click', async () => {
+      if (deferred) {
+        deferred.prompt();
+        try { await deferred.userChoice; } catch (_) { /* dismissed */ }
+        deferred = null;
+        box.hidden = true;
+      } else if (hint) {
+        hint.hidden = !hint.hidden;
+      }
+    });
+  }
+
   setupTheme();
   setupRate();
+  setupApp();
 })();
