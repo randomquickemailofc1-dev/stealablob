@@ -482,12 +482,123 @@
     calc();
   }
 
+  // ---------------------------------------------------------- 🥚 egg simulator (eggs.html)
+  function setupEggs(E) {
+    const tabs = $$('.es-tab');
+    if (!tabs.length) return;
+    const R = E.rarities, B = E.blobs, M = E.muts;
+    const byId = Object.fromEntries(E.eggs.map((e) => [e.id, e]));
+    let egg = null, busy = false;
+    let st = { opened: 0, spent: 0, counts: {}, best: [], pity: {} };
+    try { const saved = JSON.parse(store.get('eggsim') || 'null'); if (saved && saved.counts) st = Object.assign(st, saved); } catch (e) { /* fresh */ }
+    const save = () => store.set('eggsim', JSON.stringify(st));
+    const pick = (list, wkey) => {
+      let total = 0; for (const x of list) total += x[wkey];
+      let r = Math.random() * total;
+      for (const x of list) { r -= x[wkey]; if (r < 0) return x; }
+      return list[list.length - 1];
+    };
+    const isTarget = (e, id) => (e.t.id ? id === e.t.id : B[id].r === e.t.r);
+    function roll(e) {
+      let id;
+      if (e.e[0].id) id = pick(e.e, 'w').id;
+      else { const r = pick(e.e, 'w'); id = r.b[Math.floor(Math.random() * r.b.length)]; }
+      // 🍀 Lucky Meter (EggService): the pity target is guaranteed once the meter is full
+      const count = (st.pity[e.id] || 0) + 1;
+      let forced = false;
+      if (e.pity && count >= e.pity && !isTarget(e, id)) {
+        if (e.t.id) id = e.t.id;
+        else { const row = e.e.find((x) => x.r === e.t.r); if (row) id = row.b[Math.floor(Math.random() * row.b.length)]; }
+        forced = true;
+      }
+      st.pity[e.id] = isTarget(e, id) ? 0 : count;
+      let mut = 'None';
+      for (const m of e.m) { if (Math.random() < m.c) { mut = m.n; break; } }
+      return { id, mut, forced, v: B[id].v * (M[mut] ? M[mut].m : 1) };
+    }
+    // rarest first: the rarity, plus a rare mutation counts like extra rarity tiers (a Rainbow Epic beats a plain Legendary)
+    const rank = (p) => R[B[p.id].r].o + Math.log2(M[p.mut] ? M[p.mut].m : 1) * 0.8;
+    function card(p, big) {
+      const b = B[p.id], r = R[b.r], m = M[p.mut];
+      const mut = p.mut !== 'None' && m ? `<span class="es-mut" style="--mc:${m.c}">${esc(m.ic || '')} ${esc(m.l)}</span>` : '';
+      return `<a class="es-card${big ? ' big' : ''}" href="${esc(b.u)}" style="--rc:${r.a}">
+<img src="${esc(b.img)}" alt="" loading="lazy" width="${big ? 140 : 64}" height="${big ? 140 : 64}" onerror="this.style.visibility='hidden'">
+<span class="es-cn">${esc(b.n)}</span>${mut}<span class="es-cr" style="color:${r.a}">${esc(b.r)}${p.forced ? ' 🍀' : ''}</span><b class="es-cv">${money(p.v)}</b></a>`;
+    }
+    function render() {
+      const e = egg;
+      if (e) {
+        const left = e.pity ? e.pity - (st.pity[e.id] || 0) : 0;
+        const tname = e.t.id ? B[e.t.id].n : e.t.r;
+        $('#es-meter').textContent = e.pity ? `🍀 Lucky Meter: a ${tname} is guaranteed within ${left} more hatch${left === 1 ? '' : 'es'}` : '';
+        $('#es-perks').textContent = e.perks.length ? `This egg makes ${e.perks.join(', ')} mutations likelier` : '';
+      }
+      const rows = Object.keys(st.counts).sort((a, b) => R[b].o - R[a].o);
+      $('#es-sum').textContent = st.opened ? `${commas(st.opened)} eggs opened • ${money(st.spent)} of in-game cash` : 'Nothing opened yet.';
+      $('#es-bars').innerHTML = rows.map((r) => {
+        const n = st.counts[r], pc = st.opened ? (n / st.opened) * 100 : 0;
+        return `<li style="--rc:${R[r] ? R[r].a : '#fff'}"><span>${esc(r)}</span><i style="width:${Math.max(2, pc).toFixed(1)}%"></i><b>${commas(n)}</b></li>`;
+      }).join('');
+      $('#es-best').innerHTML = st.best.length ? st.best.map((p) => `<li>${card(p, false)}</li>`).join('') : '<li class="t-empty">Your rarest pulls show here</li>';
+    }
+    function select(id) {
+      egg = byId[id];
+      for (const t of tabs) t.setAttribute('aria-selected', String(t.dataset.egg === id));
+      const stage = $('.es-stage');
+      stage.style.setProperty('--ec', egg.c); stage.style.setProperty('--ea', egg.a);
+      $('#es-name').textContent = egg.n;
+      $('#es-where').textContent = `${money(egg.p)} • ${egg.where}`;
+      $('#es-result').innerHTML = '';
+      store.set('eggsim.egg', id);
+      render();
+    }
+    function open(n) {
+      if (!egg || busy) return;
+      busy = true;
+      const shell = $('#es-egg');
+      shell.classList.remove('cracked'); void shell.offsetWidth; shell.classList.add('shake');
+      setTimeout(() => {
+        const pulls = [];
+        for (let i = 0; i < n; i++) pulls.push(roll(egg));
+        st.opened += n; st.spent += egg.p * n;
+        for (const p of pulls) {
+          const r = B[p.id].r; st.counts[r] = (st.counts[r] || 0) + 1;
+          st.best.push(p);
+        }
+        st.best.sort((a, b) => rank(b) - rank(a) || b.v - a.v);
+        st.best = st.best.slice(0, 8);
+        save();
+        shell.classList.remove('shake'); shell.classList.add('cracked');
+        const top = pulls.slice().sort((a, b) => rank(b) - rank(a) || b.v - a.v);
+        $('#es-result').innerHTML = n === 1 ? card(pulls[0], true)
+          : `<p class="es-got">Best of ${n}:</p><div class="es-grid">${top.slice(0, n === 10 ? 10 : 12).map((p) => card(p, false)).join('')}</div>`;
+        render();
+        busy = false;
+      }, 650);
+    }
+    for (const t of tabs) t.addEventListener('click', () => select(t.dataset.egg));
+    for (const b of $$('.es-open')) b.addEventListener('click', () => open(+b.dataset.n));
+    $('#es-reset').addEventListener('click', () => { st = { opened: 0, spent: 0, counts: {}, best: [], pity: {} }; save(); $('#es-result').innerHTML = ''; render(); });
+    $('#es-share').addEventListener('click', async (ev) => {
+      const btn = ev.currentTarget, best = st.best[0];
+      const text = best
+        ? `I hatched a ${best.mut !== 'None' ? M[best.mut].l + ' ' : ''}${B[best.id].n} (${B[best.id].r}) in ${commas(st.opened)} eggs on the Steal a Blob egg simulator! ${location.origin}${location.pathname}`
+        : `${location.origin}${location.pathname}`;
+      const ok = await copyText(text);
+      const old = btn.lastChild.textContent; btn.lastChild.textContent = ok ? 'Copied!' : 'Copy failed';
+      setTimeout(() => { btn.lastChild.textContent = old; }, 1600);
+    });
+    const first = store.get('eggsim.egg');
+    select(byId[first] ? first : E.eggs[Math.min(1, E.eggs.length - 1)].id);
+  }
+
   // ---------------------------------------------------------- start
   localize();
   if (DATA.live) setupHome(DATA.live);
   if (DATA.blobs) setupValues(DATA);
   if (DATA.trade) setupTrade(DATA.trade);
   if (DATA.rebirth) setupRebirth(DATA.rebirth);
+  if (DATA.eggsim) setupEggs(DATA.eggsim);
   tick();
   if ($('.cd[data-until]') || $('.rc[data-period]') || hourly) setInterval(tick, 1000);
 })();
