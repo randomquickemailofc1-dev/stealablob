@@ -592,6 +592,78 @@
     select(byId[first] ? first : E.eggs[Math.min(1, E.eggs.length - 1)].id);
   }
 
+  // ---------------------------------------------------------- 🔮 which blob are you? (quiz.html)
+  function setupQuiz(Q) {
+    const qEl = $('#qz-q'), ans = $('#qz-answers'), step = $('#qz-step'), fill = $('#qz-fill');
+    if (!qEl || !ans) return;
+    const n = Q.traits.length;
+    let i = 0, score = new Array(n).fill(0), picks = [];
+    function ask() {
+      const q = Q.questions[i];
+      step.textContent = `Question ${i + 1} of ${Q.questions.length}`;
+      fill.style.width = `${(i / Q.questions.length) * 100}%`;
+      qEl.textContent = q.q;
+      ans.innerHTML = q.a.map((a, k) => `<button type="button" class="qz-a" data-k="${k}"><span aria-hidden="true">${esc(a.i)}</span>${esc(a.t)}</button>`).join('');
+      const first = ans.querySelector('button');
+      if (first && i > 0) first.focus();
+    }
+    function result() {
+      // closest blob: dot product of the answers' traits with each blob's personality; the answer pattern breaks ties
+      let seed = 7;
+      for (const p of picks) seed = (seed * 31 + p + 1) % 2147483647;
+      let best = null, bestScore = -Infinity;
+      Q.blobs.forEach((b, k) => {
+        let d = 0;
+        for (let t = 0; t < n; t++) d += score[t] * b.v[t];
+        const norm = Math.sqrt(b.v.reduce((x, y) => x + y * y, 0)) || 1;
+        const jitter = (((seed * (k + 13)) % 997) / 997) * 0.35;
+        const sc = d / Math.sqrt(norm) + jitter;
+        if (sc > bestScore) { bestScore = sc; best = b; }
+      });
+      let top = 0;
+      for (let t = 1; t < n; t++) if (score[t] > score[top]) top = t;
+      const r = Q.rarities[best.r] || { a: '#fff' };
+      $('#qz').hidden = true;
+      const res = $('#qz-result');
+      res.hidden = false;
+      $('#qz-card').href = best.u;
+      $('#qz-card').style.setProperty('--rc', r.a);
+      const img = $('#qz-img'); img.src = best.img; img.alt = best.n;
+      $('#qz-name').textContent = best.n;
+      const rar = $('#qz-rar'); rar.textContent = best.r; rar.style.color = r.a;
+      $('#qz-line').textContent = Q.lines[Q.traits[top]] || '';
+      $('#qz-desc').textContent = best.d ? `“${best.d}”` : '';
+      res.dataset.blob = best.n; res.dataset.rarity = best.r;
+      res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    ans.addEventListener('click', (e) => {
+      const btn = e.target.closest('.qz-a');
+      if (!btn) return;
+      const k = +btn.dataset.k, a = Q.questions[i].a[k];
+      for (let t = 0; t < n; t++) score[t] += a.w[t];
+      picks.push(k);
+      i += 1;
+      if (i < Q.questions.length) ask(); else { fill.style.width = '100%'; result(); }
+    });
+    $('#qz-again').addEventListener('click', () => {
+      i = 0; score = new Array(n).fill(0); picks = [];
+      $('#qz-result').hidden = true; $('#qz').hidden = false; ask();
+      $('#qz').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    $('#qz-share').addEventListener('click', async (ev) => {
+      const btn = ev.currentTarget, res = $('#qz-result');
+      const url = `${location.origin}${location.pathname}`;
+      const text = `I'm a ${res.dataset.blob} (${res.dataset.rarity}) in Steal a Blob! Which blob are you?`;
+      if (navigator.share) {
+        try { await navigator.share({ title: 'Which blob are you?', text, url }); return; } catch (e) { /* cancelled: copy instead */ }
+      }
+      const ok = await copyText(`${text} ${url}`);
+      const old = btn.lastChild.textContent; btn.lastChild.textContent = ok ? 'Copied!' : 'Copy failed';
+      setTimeout(() => { btn.lastChild.textContent = old; }, 1600);
+    });
+    ask();
+  }
+
   // ---------------------------------------------------------- start
   localize();
   if (DATA.live) setupHome(DATA.live);
@@ -599,6 +671,7 @@
   if (DATA.trade) setupTrade(DATA.trade);
   if (DATA.rebirth) setupRebirth(DATA.rebirth);
   if (DATA.eggsim) setupEggs(DATA.eggsim);
+  if (DATA.quiz) setupQuiz(DATA.quiz);
   tick();
   if ($('.cd[data-until]') || $('.rc[data-period]') || hourly) setInterval(tick, 1000);
 })();
