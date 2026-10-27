@@ -85,28 +85,35 @@
   // ---------------------------------------------------------- ☀️ Mutation of the Day
   // The SAME rule as Config.dailyMutationOn in the game (src/shared/Config.luau): cycles of
   // pool.length days, each a seeded shuffle (an LCG that stays exact in doubles), and a cycle
-  // never starts with the mutation the previous one ended on. checks.py runs exactly the code
-  // between the markers in node and compares 60 days with the game's own answers.
+  // never starts with the mutation the previous one ended on. From rule.next.from on, the bigger
+  // rule.next.pool takes over (cycles counted from that day; its first one never starts with the
+  // day before's mutation). checks.py runs exactly the code between the markers in node and
+  // compares 60 days with the game's own answers.
   // @daily-rule-begin
   function dailyMutationOn(day, rule) {
-    const pool = rule.pool, n = pool.length;
-    const cycle = (c) => {
-      const p = pool.slice();
-      let x = ((c * 7919 + rule.seed) % 2147483646) + 1;
-      for (let i = n; i >= 2; i--) {
-        x = (x * 48271) % 2147483647;
-        const j = x % i;
-        const t = p[i - 1]; p[i - 1] = p[j]; p[j] = t;
+    const run = (pool, rel, before) => {
+      const n = pool.length;
+      const cycle = (c) => {
+        const p = pool.slice();
+        let x = ((c * 7919 + rule.seed) % 2147483646) + 1;
+        for (let i = n; i >= 2; i--) {
+          x = (x * 48271) % 2147483647;
+          const j = x % i;
+          const t = p[i - 1]; p[i - 1] = p[j]; p[j] = t;
+        }
+        return p;
+      };
+      const c = Math.floor(rel / n);
+      const cur = cycle(c);
+      if (n >= 3) {
+        const last = c === 0 && before !== undefined ? before : cycle(c - 1)[n - 1];
+        if (cur[0] === last) { const t = cur[0]; cur[0] = cur[1]; cur[1] = t; }
       }
-      return p;
+      return cur[((rel % n) + n) % n];
     };
-    const c = Math.floor(day / n);
-    const cur = cycle(c);
-    if (n >= 3) {
-      const prev = cycle(c - 1);
-      if (cur[0] === prev[n - 1]) { const t = cur[0]; cur[0] = cur[1]; cur[1] = t; }
-    }
-    return cur[((day % n) + n) % n];
+    const nx = rule.next;
+    if (nx && nx.pool && nx.pool.length && day >= nx.from) return run(nx.pool, day - nx.from, run(rule.pool, nx.from - 1));
+    return run(rule.pool, day);
   }
   // @daily-rule-end
 
@@ -228,7 +235,8 @@
     const cards = $$('.blob[data-id]', grid);
     const soon = $$('.blob.soon', grid);
     const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
-    let rarity = '';
+    let rarity = '', where = '';
+    const whereSel = $('#where'); // "where to get it": road / sky / lobby / w:<world> / boss / limited / pass / robux
     const saved = store.get('sort');
     if (saved && sortSel.querySelector(`option[value="${saved}"]`)) sortSel.value = saved;
     const cmp = {
@@ -245,16 +253,21 @@
       let shown = 0;
       for (const b of list) {
         const c = grid.querySelector(`[data-id="${CSS.escape(b.id)}"]`);
-        const ok = (!rarity || b.r === rarity) && (!term || norm(b.n).includes(term));
+        const ok = (!rarity || b.r === rarity) && (!term || norm(b.n).includes(term)) && (!where || (b.w || []).includes(where));
         c.hidden = !ok; if (ok) shown++;
         grid.appendChild(c);
       }
-      for (const s of soon) { s.hidden = !!(rarity || term); grid.appendChild(s); }
+      for (const s of soon) { s.hidden = !!(rarity || term || where); grid.appendChild(s); }
       count.textContent = shown === cards.length ? `${shown} blobs` : `${shown} of ${cards.length} blobs`;
       empty.hidden = shown > 0;
     }
     q.addEventListener('input', apply);
     sortSel.addEventListener('change', () => { store.set('sort', sortSel.value); apply(); });
+    if (whereSel) {
+      const pick = () => { where = whereSel.value; whereSel.classList.toggle('on', !!where); apply(); };
+      whereSel.addEventListener('change', pick);
+      if (whereSel.value) pick(); // (a back/forward visit keeps the select's value)
+    }
     for (const chip of $$('.chip')) {
       chip.addEventListener('click', () => {
         rarity = chip.dataset.r;
@@ -688,6 +701,52 @@
     });
   }
 
+  // ---------------------------------------------------------- 📅 server-events.html: the next 7 days, local time
+  // W.items = weekly events {n, i, o (seconds after Thu Jan 1 1970 00:00 UTC, like the game's week maths), d, h, c, x};
+  // W.dated = one-off ones {n, i, t (unix start), d, h, c, x}. Redrawn every minute (LIVE flags).
+  function setupWeek(W) {
+    const box = $('#wk'); if (!box) return;
+    const WEEK = 604800;
+    let fD, fW, fT;
+    try {
+      fD = new Intl.DateTimeFormat(undefined, { month: 'short', day: 'numeric' });
+      fW = new Intl.DateTimeFormat(undefined, { weekday: 'long' });
+      fT = new Intl.DateTimeFormat(undefined, { hour: 'numeric', minute: '2-digit' });
+    } catch (e) { return; }
+    function draw() {
+      const n = now();
+      const d0 = new Date(); d0.setHours(0, 0, 0, 0);
+      const days = [];
+      for (let i = 0; i < 7; i++) {
+        const a = new Date(d0); a.setDate(d0.getDate() + i);
+        const b = new Date(a); b.setDate(a.getDate() + 1);
+        days.push([a.getTime() / 1000, b.getTime() / 1000, a]);
+      }
+      const from = days[0][0], to = days[6][1], occ = [];
+      for (const it of W.items) {
+        for (let s = it.o + Math.floor((from - it.o - it.d) / WEEK) * WEEK; s < to; s += WEEK) if (s + it.d > from) occ.push([s, s + it.d, it]);
+      }
+      for (const it of W.dated) if (it.t < to && it.t + it.d > from) occ.push([it.t, it.t + it.d, it]);
+      occ.sort((a, b) => a[0] - b[0]);
+      let html = '<div class="wk-grid">';
+      days.forEach(([a, b, date], i) => {
+        const label = i === 0 ? 'Today' : i === 1 ? 'Tomorrow' : fW.format(date);
+        const evs = occ.filter(([s, e]) => s < b && e > a).map(([s, e, it]) => {
+          const live = n >= s && n < e;
+          const when = live ? `LIVE now, ${left(e - n)} left` : e <= n ? 'Ended' : (s < a && e >= b) ? 'All day'
+            : s >= a ? fT.format(new Date(s * 1000)) + (e - s > 86400 ? ', all weekend' : '') : `until ${fT.format(new Date(e * 1000))}`;
+          return `<li class="wk-ev${live ? ' live' : e <= n ? ' past' : ''}" style="--ec:${esc(it.c)}"><a href="${esc(it.h)}">${esc(it.i)} ${esc(it.n)}`
+            + `<small>${esc(when)}${it.x ? ' · ' + esc(it.x) : ''}</small></a></li>`;
+        }).join('');
+        html += `<div class="wk-day${i === 0 ? ' is-today' : ''}"><p class="wk-h"><b>${esc(label)}</b><span>${esc((i < 2 ? fW.format(date) + ', ' : '') + fD.format(date))}</span></p>`
+          + (evs ? `<ul>${evs}</ul>` : '<p class="wk-quiet">Hourly + random events</p>') + '</div>';
+      });
+      box.innerHTML = html + '</div>';
+    }
+    draw();
+    setInterval(draw, 60000);
+  }
+
   // ---------------------------------------------------------- start
   localize();
   if (DATA.live) setupHome(DATA.live);
@@ -696,6 +755,7 @@
   if (DATA.rebirth) setupRebirth(DATA.rebirth);
   if (DATA.eggsim) setupEggs(DATA.eggsim);
   if (DATA.quiz) setupQuiz(DATA.quiz);
+  if (DATA.week) setupWeek(DATA.week);
   tick();
   if ($('.cd[data-until]') || $('.rc[data-period]') || hourly) setInterval(tick, 1000);
 })();

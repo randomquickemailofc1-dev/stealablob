@@ -2,7 +2,7 @@
    Pages, scripts and styles: network first (always fresh), the last copy if offline.
    Images and fonts: cache first (they never change under the same name).
    No connection and nothing cached = the home page if we have it. */
-const V = 'sab-aeae926f';
+const V = 'sab-8d72c54f';
 const SHELL = ['/', '/codes.html', '/values.html', '/style.css', '/site.js', '/img/icon-192.png'];
 
 self.addEventListener('install', (e) => {

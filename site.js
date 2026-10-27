@@ -184,7 +184,46 @@
     });
   }
 
+  // ---------------------------------------------------------- ☰ More: the footer's site map (#site-map) as a sheet
+  // The More links point at #site-map, so without JS (or <dialog>) they just jump to the footer.
+  function setupMenu() {
+    const map = $('#site-map');
+    if (!map || typeof HTMLDialogElement !== 'function') return;
+    let dlg = null;
+    function build() {
+      dlg = document.createElement('dialog');
+      dlg.className = 'sheet menu-sheet';
+      dlg.setAttribute('aria-labelledby', 'menu-h');
+      const inner = document.createElement('div');
+      inner.className = 'sh-in';
+      inner.innerHTML = '<button class="sh-close" type="button" aria-label="Close">✕</button><p class="menu-h" id="menu-h">All pages</p>';
+      const copy = map.cloneNode(true);
+      copy.removeAttribute('id');
+      copy.classList.add('menu-map');
+      inner.appendChild(copy);
+      const play = $('a.playbar') || $('a.play-mini');
+      if (play) { // the page's own Play link (already the right src, the ?ref= script ran before this)
+        const p = play.cloneNode(true);
+        p.className = 'btn btn-play menu-play';
+        p.lastElementChild.textContent = 'Play free on Roblox';
+        inner.appendChild(p);
+      }
+      dlg.appendChild(inner);
+      document.body.appendChild(dlg);
+      inner.querySelector('.sh-close').addEventListener('click', () => dlg.close());
+      dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    }
+    for (const a of $$('[data-menu]')) {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!dlg) build();
+        if (!dlg.open) dlg.showModal();
+      });
+    }
+  }
+
   setupTheme();
   setupRate();
   setupApp();
+  setupMenu();
 })();

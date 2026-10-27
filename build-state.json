@@ -1,603 +1,714 @@
 {
  "lastmod": {
   "404.html": [
-   "88e3d162cd318d3f",
-   "2026-10-26"
+   "2b485ad063ddd570",
+   "2026-10-27"
+  ],
+  "beginners-guide.html": [
+   "7ec3dd320266f66d",
+   "2026-10-27"
   ],
   "blobs/aurora-angel.html": [
-   "f676f50279b3cc4a",
-   "2026-10-26"
+   "19e7a8666c26cdee",
+   "2026-10-27"
   ],
   "blobs/black-hole-blob.html": [
-   "57716326f33c3320",
-   "2026-10-26"
+   "326e90faf5d180bb",
+   "2026-10-27"
   ],
   "blobs/blizzard-baron.html": [
-   "c7630f206c964760",
-   "2026-10-26"
+   "053249fcec0cb270",
+   "2026-10-27"
   ],
   "blobs/bow-bow.html": [
-   "c74a9f45e919a9eb",
-   "2026-10-26"
+   "944add922fc1a996",
+   "2026-10-27"
   ],
   "blobs/bubble-jelly.html": [
-   "3acc28f82cb4c0ca",
-   "2026-10-26"
+   "abee312da8eb83b9",
+   "2026-10-27"
   ],
   "blobs/bubblegum-baron.html": [
-   "387dc063c8da2296",
-   "2026-10-26"
+   "a3dfea615ecceaff",
+   "2026-10-27"
   ],
   "blobs/bubbleguts.html": [
-   "7440fb66a6b9fa1b",
-   "2026-10-26"
+   "be97b3c410cc4e8c",
+   "2026-10-27"
   ],
   "blobs/cactus-cutie.html": [
-   "85c9fb17ddc2992d",
-   "2026-10-26"
+   "0848d89e18e56e41",
+   "2026-10-27"
   ],
   "blobs/captain-barnacle.html": [
-   "65891163051105f9",
-   "2026-10-26"
+   "5318914b4103e713",
+   "2026-10-27"
   ],
   "blobs/captain-splat.html": [
-   "ccff2a72cadca930",
-   "2026-10-26"
+   "cdba135c63cbfd8c",
+   "2026-10-27"
   ],
   "blobs/cloud-puff.html": [
-   "d3b7ff207075a1d3",
-   "2026-10-26"
+   "f27424c653babb43",
+   "2026-10-27"
   ],
   "blobs/comet-cruller.html": [
-   "3fa75019168dfc51",
-   "2026-10-26"
+   "fe4b8bc692b0e5ae",
+   "2026-10-27"
   ],
   "blobs/cool-cucumber.html": [
-   "602b366ad729a1b6",
-   "2026-10-26"
+   "7d47fa07e2c4c360",
+   "2026-10-27"
   ],
   "blobs/cosmic-creator.html": [
-   "4e52259e31c4ffc8",
-   "2026-10-26"
+   "a38dfd7fcf7484e4",
+   "2026-10-27"
   ],
   "blobs/cotton-candy-cloud.html": [
-   "8e8d77e2cf127d52",
-   "2026-10-26"
+   "37395da7d7b75ff0",
+   "2026-10-27"
   ],
   "blobs/count-blobula.html": [
-   "9f7eae100376df6b",
-   "2026-10-26"
+   "5538afa31fe8b77a",
+   "2026-10-27"
   ],
   "blobs/crystal-gloop.html": [
-   "95d5b33b3f8fe9f2",
-   "2026-10-26"
+   "2803fbffe04ece03",
+   "2026-10-27"
   ],
   "blobs/diamond-drizzle.html": [
-   "7c426a026a3f27c0",
-   "2026-10-26"
+   "b6e79acbccc72c90",
+   "2026-10-27"
   ],
   "blobs/dragon-drip.html": [
-   "f095f6446b8d701a",
-   "2026-10-26"
+   "b2d45278bd31b98e",
+   "2026-10-27"
   ],
   "blobs/ember-blob.html": [
-   "fe7e926591119b13",
-   "2026-10-26"
+   "7fdb41d054cd701c",
+   "2026-10-27"
   ],
   "blobs/fairy-fizz.html": [
-   "69f4f899f62fb368",
-   "2026-10-26"
+   "bfd34bec72eea763",
+   "2026-10-27"
+  ],
+  "blobs/fairy-ringleader.html": [
+   "a01e8968f54b33cc",
+   "2026-10-27"
   ],
   "blobs/fizzlewump.html": [
-   "af7a3efff521c35c",
-   "2026-10-26"
+   "63c95fe8f648d469",
+   "2026-10-27"
   ],
   "blobs/frankengoo.html": [
-   "e8b603cdf19264ee",
-   "2026-10-26"
+   "c5a9ba7fc888408e",
+   "2026-10-27"
   ],
   "blobs/frost-giant-jr.html": [
-   "c81f8049259eae7e",
-   "2026-10-26"
+   "5fe1afbbfdde487b",
+   "2026-10-27"
   ],
   "blobs/frostbite-fred.html": [
-   "effcd32a29cc3bce",
-   "2026-10-26"
+   "049612fbea34181c",
+   "2026-10-27"
   ],
   "blobs/frosty-flake.html": [
-   "99685487ad7a9a93",
-   "2026-10-26"
+   "608e6a17fe5bc78b",
+   "2026-10-27"
+  ],
+  "blobs/fungus-rex-jr.html": [
+   "5da67aecedcd0274",
+   "2026-10-27"
   ],
   "blobs/galaxy-gulp.html": [
-   "f92bfbecbf11d89c",
-   "2026-10-26"
+   "b32b5d93eec9f4f8",
+   "2026-10-27"
   ],
   "blobs/glacier-gulp.html": [
-   "ec5c89185433d3f0",
-   "2026-10-26"
+   "440825c54cd2131b",
+   "2026-10-27"
   ],
   "blobs/gloopster.html": [
-   "e95611a65d39f0ea",
-   "2026-10-26"
+   "5d7fc9f508df5801",
+   "2026-10-27"
+  ],
+  "blobs/glowcap-gloop.html": [
+   "1997f800017b6896",
+   "2026-10-27"
   ],
   "blobs/golden-goo-god.html": [
-   "6ffae8f0045fa98b",
-   "2026-10-26"
+   "c30d81d1d9151860",
+   "2026-10-27"
   ],
   "blobs/gummy-glob.html": [
-   "f12ce16bc96e197c",
-   "2026-10-26"
+   "e04791db6aa91320",
+   "2026-10-27"
+  ],
+  "blobs/humpty-camel.html": [
+   "d8f4775494dfc294",
+   "2026-10-27"
   ],
   "blobs/inferno-king.html": [
-   "c4b9138bd293d59e",
-   "2026-10-26"
+   "4163712429930442",
+   "2026-10-27"
   ],
   "blobs/jellybean-jr.html": [
-   "7852d54dff9b1a6f",
-   "2026-10-26"
+   "38eb2955a2cb5a69",
+   "2026-10-27"
   ],
   "blobs/king-wobble.html": [
-   "f6581c389c825637",
-   "2026-10-26"
+   "1c07b60485c69114",
+   "2026-10-27"
   ],
   "blobs/kraken-queen-jr.html": [
-   "c49575690b095788",
-   "2026-10-26"
+   "b01d9993aa7dc472",
+   "2026-10-27"
   ],
   "blobs/lava-lump.html": [
-   "293526693e47e30c",
-   "2026-10-26"
+   "05b1ba519f9cc72c",
+   "2026-10-27"
+  ],
+  "blobs/lil-truffle.html": [
+   "cae625f42cbf4dce",
+   "2026-10-27"
   ],
   "blobs/lollipop-lord.html": [
-   "900959c2092856be",
-   "2026-10-26"
+   "10a63ac9ba3d5f04",
+   "2026-10-27"
   ],
   "blobs/magma-munch.html": [
-   "f2b46b6f18b1ad92",
-   "2026-10-26"
+   "333797f63b5e7878",
+   "2026-10-27"
   ],
   "blobs/magma-titan-jr.html": [
-   "6b4d76a5cc0c9c6c",
-   "2026-10-26"
+   "6bfb23c5d2ae5e0a",
+   "2026-10-27"
   ],
   "blobs/marshmallord.html": [
-   "57ef2c3a755c1b4d",
-   "2026-10-26"
+   "7f85b0dd277f1021",
+   "2026-10-27"
   ],
   "blobs/mecha-glob.html": [
-   "ca3a9cc4a82aca8c",
-   "2026-10-26"
+   "7bdb194186054f7f",
+   "2026-10-27"
+  ],
+  "blobs/mini-mummy.html": [
+   "fe0d6164f2d162f2",
+   "2026-10-27"
   ],
   "blobs/moon-mochi.html": [
-   "ac858b04dc6316d5",
-   "2026-10-26"
+   "7d1edade20cadfdb",
+   "2026-10-27"
   ],
   "blobs/mossy.html": [
-   "c5122749fff699d4",
-   "2026-10-26"
+   "a74366f2212e9a3d",
+   "2026-10-27"
   ],
   "blobs/mummy-mush.html": [
-   "51ccaf0679c6e171",
-   "2026-10-26"
+   "9f94f24e87edf6cf",
+   "2026-10-27"
+  ],
+  "blobs/mycelium-monarch.html": [
+   "cbd30eb5224fe14f",
+   "2026-10-27"
   ],
   "blobs/nebula-nomad.html": [
-   "b83b4bd5b9399130",
-   "2026-10-26"
+   "e85e968580ecdc5e",
+   "2026-10-27"
   ],
   "blobs/nebula-nugget.html": [
-   "6264074d26654191",
-   "2026-10-26"
+   "7ce4f9ec97ab36dc",
+   "2026-10-27"
   ],
   "blobs/neon-noodle.html": [
-   "e611ceee21713c93",
-   "2026-10-26"
+   "229fbafb3189178a",
+   "2026-10-27"
   ],
   "blobs/nerdy-gel.html": [
-   "93b0d2a990ee5491",
-   "2026-10-26"
+   "eb33ced18cf86670",
+   "2026-10-27"
   ],
   "blobs/obsidian-ooze.html": [
-   "4fed5797b8cb7f50",
-   "2026-10-26"
+   "81d38c5be487cc39",
+   "2026-10-27"
   ],
   "blobs/ocean-overlord.html": [
-   "dacb035d1f6f65b5",
-   "2026-10-26"
+   "b74e9b586eb370e7",
+   "2026-10-27"
   ],
   "blobs/omniblob.html": [
-   "f079d6c1ead4a97e",
-   "2026-10-26"
+   "79fe5d345bfc4351",
+   "2026-10-27"
   ],
   "blobs/pearl-princess.html": [
-   "daf08e5763f1ba3d",
-   "2026-10-26"
+   "a3bfc6ab52b19f2c",
+   "2026-10-27"
   ],
   "blobs/pebble-pal.html": [
-   "83706a9996b446af",
-   "2026-10-26"
+   "15bfc7146d6eea5b",
+   "2026-10-27"
   ],
   "blobs/phantom-ooze.html": [
-   "db994b5b475b28e3",
-   "2026-10-26"
+   "03b25e0c68e8e26f",
+   "2026-10-27"
+  ],
+  "blobs/pharaoh-gloop-jr.html": [
+   "1d796c30a38d5cfe",
+   "2026-10-27"
   ],
   "blobs/planet-pudding.html": [
-   "9fa91595ea2713e7",
-   "2026-10-26"
+   "76a06e95069ee315",
+   "2026-10-27"
+  ],
+  "blobs/prickle-pal.html": [
+   "9fef68921f327d2e",
+   "2026-10-27"
   ],
   "blobs/prism-pudding.html": [
-   "2b568315327d7f37",
-   "2026-10-26"
+   "e5d1dc1bdd1c206d",
+   "2026-10-27"
   ],
   "blobs/puddle-blob.html": [
-   "f31e5b2e2557189a",
-   "2026-10-26"
+   "cffed81c6fb4b972",
+   "2026-10-27"
+  ],
+  "blobs/puffball-pip.html": [
+   "a24bffc61e6924cf",
+   "2026-10-27"
   ],
   "blobs/pufferpop.html": [
-   "8082ccabc3048d4b",
-   "2026-10-26"
+   "0ba88785a1c65078",
+   "2026-10-27"
   ],
   "blobs/pumpkin-puff.html": [
-   "13daa7431eca86b7",
-   "2026-10-26"
+   "2b3857882237fb95",
+   "2026-10-27"
   ],
   "blobs/quasar-queen.html": [
-   "0ad4eb855a6554b6",
-   "2026-10-26"
+   "d50d1eb92c93cfe7",
+   "2026-10-27"
   ],
   "blobs/rainbow-royale.html": [
-   "9df7ce08e61e7782",
-   "2026-10-26"
+   "e6b6c700b109eb8c",
+   "2026-10-27"
+  ],
+  "blobs/sandcastle-sam.html": [
+   "690b6e8ba1eb0fee",
+   "2026-10-27"
+  ],
+  "blobs/scarab-sparkle.html": [
+   "e7598e0c49795bea",
+   "2026-10-27"
   ],
   "blobs/sir-slimealot.html": [
-   "38933595d149af31",
-   "2026-10-26"
+   "f37070dfc46e1fb9",
+   "2026-10-27"
   ],
   "blobs/sir-squish.html": [
-   "6c6d24acb70ea3f0",
-   "2026-10-26"
+   "fc589825c8a6c405",
+   "2026-10-27"
+  ],
+  "blobs/sphinx-supreme.html": [
+   "c865fd75c0c231b3",
+   "2026-10-27"
   ],
   "blobs/spider-splat.html": [
-   "f9f45010f1ab3c76",
-   "2026-10-26"
+   "27e9e6dd3cf863cb",
+   "2026-10-27"
   ],
   "blobs/sproutling.html": [
-   "06bd5f4149ef0ae5",
-   "2026-10-26"
+   "ceef00884c7ca482",
+   "2026-10-27"
   ],
   "blobs/star-slime.html": [
-   "e98b257e76093165",
-   "2026-10-26"
+   "f4c8a1623f56f8c8",
+   "2026-10-27"
   ],
   "blobs/starlight-squish.html": [
-   "a5691351c00c410f",
-   "2026-10-26"
+   "8ee17704b8bc63c3",
+   "2026-10-27"
   ],
   "blobs/sugar-king-jr.html": [
-   "029e349ee4a33f0b",
-   "2026-10-26"
+   "cdde49e1d0b93e84",
+   "2026-10-27"
   ],
   "blobs/sugar-rush-supreme.html": [
-   "a97ec07e5765aad6",
-   "2026-10-26"
+   "a6b3a8913ed79566",
+   "2026-10-27"
   ],
   "blobs/sunny-seraph.html": [
-   "4f71af3ba1f2926d",
-   "2026-10-26"
+   "cc6290b4a17d69e5",
+   "2026-10-27"
   ],
   "blobs/supernova-slime.html": [
-   "397e2e80b31dc1da",
-   "2026-10-26"
+   "bf37cc74840d7d69",
+   "2026-10-27"
   ],
   "blobs/the-great-gloop.html": [
-   "67650fe906800d78",
-   "2026-10-26"
+   "31f082bcc118cf5b",
+   "2026-10-27"
   ],
   "blobs/thunder-goo.html": [
-   "cf180dbe5121f996",
-   "2026-10-26"
+   "8f7688c5e19e6a53",
+   "2026-10-27"
+  ],
+  "blobs/toadstool-tot.html": [
+   "c718df1bde1341b3",
+   "2026-10-27"
   ],
   "blobs/void-emperor-jr.html": [
-   "4d43b118439a7a05",
-   "2026-10-26"
+   "51bcd1685b3deda9",
+   "2026-10-27"
   ],
   "blobs/void-gobbler.html": [
-   "27d7038bef10d731",
-   "2026-10-26"
+   "a38d1e1fe3370f73",
+   "2026-10-27"
   ],
   "codes.html": [
-   "cfce03ec7e8ba2b8",
-   "2026-10-26"
+   "f49ab0344412f462",
+   "2026-10-27"
   ],
   "creators.html": [
-   "d82a96698eabb889",
-   "2026-10-26"
+   "392e1ccc29c3655a",
+   "2026-10-27"
   ],
   "eggs.html": [
-   "af44460f6198581d",
-   "2026-10-26"
+   "1d38a9cfcbd6235e",
+   "2026-10-27"
+  ],
+  "faq.html": [
+   "955297c513c383ce",
+   "2026-10-27"
   ],
   "galaxy.html": [
-   "07e433f0d586daad",
-   "2026-10-26"
+   "3c5f28ca279d2ddc",
+   "2026-10-27"
   ],
   "games-like-steal-a-brainrot.html": [
-   "1ad807f31fc1ecaa",
-   "2026-10-26"
+   "eb8a00b424fc6cf4",
+   "2026-10-27"
   ],
   "get-rich-fast.html": [
-   "ef4b058b473cddf9",
-   "2026-10-26"
+   "bf5ec90dbd47e96e",
+   "2026-10-27"
+  ],
+  "gloves.html": [
+   "26a5548c83575402",
+   "2026-10-27"
   ],
   "guide.html": [
-   "de124fea279350fc",
-   "2026-10-26"
+   "07b1b37f470116c6",
+   "2026-10-27"
   ],
   "index.html": [
-   "e7b65d7b8f8ea38d",
-   "2026-10-26"
+   "ce93d4dad0f0e0dd",
+   "2026-10-27"
   ],
   "leaderboards.html": [
-   "e51ea269b814e753",
-   "2026-10-26"
+   "b8fe6070e62b5263",
+   "2026-10-27"
   ],
   "mutations.html": [
-   "6953a194e316280f",
-   "2026-10-26"
+   "aaa5d49f778700c1",
+   "2026-10-27"
   ],
   "players.html": [
-   "df5e12468f62be18",
-   "2026-10-26"
+   "8c925520394e88fb",
+   "2026-10-27"
   ],
   "players/robloxsbestdevx.html": [
-   "5b8a769aba75f316",
-   "2026-10-26"
+   "66feb2e695a13506",
+   "2026-10-27"
   ],
   "quiz.html": [
-   "f546384446714dfc",
-   "2026-10-26"
+   "15cbf1ae09c2c5d9",
+   "2026-10-27"
   ],
   "seasons.html": [
-   "1ff3b72d9f332d98",
-   "2026-10-26"
+   "9975626d71f44ce2",
+   "2026-10-27"
   ],
   "server-events.html": [
-   "5c5ca0036dbea43a",
-   "2026-10-26"
+   "9a65ebe3460d2233",
+   "2026-10-27"
   ],
   "tiers.html": [
-   "667f029465c3398e",
-   "2026-10-26"
+   "6361f4e79a3cdeaf",
+   "2026-10-27"
   ],
   "trade.html": [
-   "4bef0ac4d5628a72",
-   "2026-10-26"
+   "12996778467dbbfa",
+   "2026-10-27"
   ],
   "updates.html": [
-   "3fc760b4e2a9c1cf",
-   "2026-10-26"
+   "73d73d9859251202",
+   "2026-10-27"
   ],
   "values.html": [
-   "2ae89752a7298cd4",
-   "2026-10-26"
+   "631a7e064713cf52",
+   "2026-10-27"
   ],
   "wallpapers.html": [
-   "083fd4327e6b6cd3",
-   "2026-10-26"
+   "5682060e8a081e3a",
+   "2026-10-27"
+  ],
+  "worlds.html": [
+   "a14a452f0958e7b7",
+   "2026-10-27"
   ]
  },
  "render": {
-  "img/blobs/AuroraAngel.webp": "f47c4f9475ed316a6129d71f2c1a75e5e64df92b",
-  "img/blobs/BlackHoleBlob.webp": "1b23e258c82b2233ae1fb49ae30a2fdfdd4f8ddc",
-  "img/blobs/BlizzardBaron.webp": "51ec9e41ae247b59f8feafbd996bc2eb33405cbe",
-  "img/blobs/BowBow.webp": "1ec78e9f61c191cae6a3e3bd7fb25791b85a7724",
-  "img/blobs/BubbleJelly.webp": "6bc73e5b01c6dfb327160305d4181f691208e4ec",
-  "img/blobs/BubblegumBaron.webp": "05fbeff289a14de660728b5b34e7d33754c7685e",
-  "img/blobs/Bubbleguts.webp": "5aaf4124405c2228a03e754b85abc2ba4f95bf3a",
-  "img/blobs/CactusCutie.webp": "46c4a2c50de6b6912cf6121ec372d3cccb8e8a14",
-  "img/blobs/CaptainBarnacle.webp": "f781cec990b331b6ff12c0ff3e66c49fe55ff717",
-  "img/blobs/CaptainSplat.webp": "ce7112f060b12e9c08453f7406f8091dc82deca1",
-  "img/blobs/CloudPuff.webp": "379d951094de3b723144b97c8dfadcee2d8acb46",
-  "img/blobs/CometCruller.webp": "c6b63427937785dc3cf45da8a6df1a3dc1f34221",
-  "img/blobs/CoolCucumber.webp": "fb53c9ee4f3536330fe296842b9b0a51572f4650",
-  "img/blobs/CosmicCreator.webp": "192e91b182d752be5b81f25959e75fac038e0e2b",
-  "img/blobs/CottonCandyCloud.webp": "9f2e301c8d2a037ac55da7cf5aba2e698a67c84d",
-  "img/blobs/CountBlobula.webp": "d4025460c047492c69ffc391ba043c0125d81278",
-  "img/blobs/CrystalGloop.webp": "dc4b58e29004315588821bb40fed33b2c7e53697",
-  "img/blobs/DiamondDrizzle.webp": "155f83514e57ebc30ecd49b61445636c8a0b7a0d",
-  "img/blobs/DragonDrip.webp": "d1ee5fefea89e2d0a14eab22f133b5aaeccff2fb",
-  "img/blobs/EmberBlob.webp": "421164ac09787c0c7b8b2bd09d080b472dd430e6",
-  "img/blobs/FairyFizz.webp": "3f94bbdfb624df441872c9270a65cbb83688ed50",
-  "img/blobs/Fizzlewump.webp": "26bd58ada649f72d629a9a791e7ae7402721e1ca",
-  "img/blobs/Frankengoo.webp": "6fa86ed059afdf06cb14bfdea966c659db3999ac",
-  "img/blobs/FrostGiantJr.webp": "f976fe7c1781ae592c73e2f42c187923669e4cb5",
-  "img/blobs/FrostbiteFred.webp": "906f47c63c7b910e19295f103aea38269762a511",
-  "img/blobs/FrostyFlake.webp": "911f893312cd1b0fd43cb220b13bf35e9359c4df",
-  "img/blobs/GalaxyGulp.webp": "1a8f35a2e0bfa48dc442a0333c06dde82ff9699a",
-  "img/blobs/GlacierGulp.webp": "40da055d01fb875ef08f11b19bf5b12169f08e01",
-  "img/blobs/Gloopster.webp": "9bceb012fb292331c3becd0144fa6e24ade98515",
-  "img/blobs/GoldenGooGod.webp": "221fa76ebfaed876c1683c35114c0bc88c5b5703",
-  "img/blobs/GummyGlob.webp": "936a259ab42cd7cae7e3d195bb99651fb8da32c2",
-  "img/blobs/InfernoKing.webp": "3d1fe34ea554572af205adfa6dd506f0124a2a65",
-  "img/blobs/JellybeanJr.webp": "fcbd2242e2119fe92526d97f25d5a941457c15d5",
-  "img/blobs/KingWobble.webp": "4aca5cc250ae148c7f674d93e9d791543803fc8a",
-  "img/blobs/KrakenQueenJr.webp": "0967034c72237ccf85ce72caac566a6189281028",
-  "img/blobs/LavaLump.webp": "e866fa5ed2c1433c2eac43773ae43347284d40cc",
-  "img/blobs/LollipopLord.webp": "3c7cecf3aa3c6e6bbe65ba9c53a82f6093970594",
-  "img/blobs/MagmaMunch.webp": "c87a3aac6201a07987a1f9e5a565ec8f69edfdfe",
-  "img/blobs/MagmaTitanJr.webp": "a4cbb6e8a39fae099c551a87c7a7cb7d6d41ef81",
-  "img/blobs/Marshmallord.webp": "4331ee3ad2ec5429795601ebb64ae7779102fe79",
-  "img/blobs/MechaGlob.webp": "b2e2ecfca8a083adff986cd80a382c18ab71febf",
-  "img/blobs/MoonMochi.webp": "4b29f7c9ad080915cc268dccd8e7f212f10a67a8",
-  "img/blobs/Mossy.webp": "68b8380194051318bc36da0478e4216546987bbe",
-  "img/blobs/MummyMush.webp": "9dafd9eec4e3ac825950bc37d531afc864dd493c",
-  "img/blobs/NebulaNomad.webp": "514b0d3f310af6fa5df36a9533e94a7c88d6940c",
-  "img/blobs/NebulaNugget.webp": "d989490dedb669f2b8f15b937b8a9073760e10ae",
-  "img/blobs/NeonNoodle.webp": "c74c4c121fff57f4b53b519e5998cecc3ac0b4d0",
-  "img/blobs/NerdyGel.webp": "d7606d4993e2a4d118e5a1607cd28ddc8722ecf4",
-  "img/blobs/ObsidianOoze.webp": "bd47550c8df78568f9a2ac7cae4face07ab1b277",
-  "img/blobs/OceanOverlord.webp": "6348479777d99473aa63cddf677346056f879756",
-  "img/blobs/Omniblob.webp": "1079b842227638e2daecbc272042add14bd808d0",
-  "img/blobs/PearlPrincess.webp": "dcb3fc88a8db71069646ce9cb912bf7950fd92ec",
-  "img/blobs/PebblePal.webp": "f7d2e36f9baf8999174c85efe1aeec5b15e010ae",
-  "img/blobs/PhantomOoze.webp": "3b1cd3b24b670203fef42e0b2f5d2b32146baab6",
-  "img/blobs/PlanetPudding.webp": "7ecc0ffbdb3e22653df1ed914eab859dcca3e001",
-  "img/blobs/PrismPudding.webp": "ec12105c151af2842b49771e40ecd7a60ee4f661",
-  "img/blobs/PuddleBlob.webp": "27decb17524794052fffc680a2015f7ed2c3f6de",
-  "img/blobs/Pufferpop.webp": "47b0be696559ff20388e357bbf75a53880bee119",
-  "img/blobs/PumpkinPuff.webp": "ff3ffb7a4d77489e41c68b04e38897efb2c8f602",
-  "img/blobs/QuasarQueen.webp": "b537d32041e7d8e71b0e61a94b8cea9cf71c61b3",
-  "img/blobs/RainbowRoyale.webp": "0520ba6174e824b7a364ee9150962cd86d45f8d7",
-  "img/blobs/SirSlimealot.webp": "02bbcbb6728703156d12bd8122b144ef66db7f1c",
-  "img/blobs/SirSquish.webp": "8aef9b3586392efa08f8b77b0c919ec83a7a6d84",
-  "img/blobs/SpiderSplat.webp": "3050a415939a2c1b9d700906566474a05ac41b8d",
-  "img/blobs/Sproutling.webp": "3d9f31e1d2db051e3fe0810a768540bef03c27bc",
-  "img/blobs/StarSlime.webp": "e06ce6245d48273a9fb46342788ad24ac59a3831",
-  "img/blobs/StarlightSquish.webp": "b33b38186f6f1cd2f62fd900e3b342ed9a8a25a6",
-  "img/blobs/SugarKingJr.webp": "beff4f6cd8a6e60145aa493e5a11911878b8b9a9",
-  "img/blobs/SugarRushSupreme.webp": "c7915ab70365ea2b813c7ebf0a6eb384d3b40082",
-  "img/blobs/SunnySeraph.webp": "b1ae977c57bbeedb76540bf9787483b0d4005203",
-  "img/blobs/SupernovaSlime.webp": "556f2fc8fb86993ef4d893838017be843c45f1a6",
-  "img/blobs/TheGreatGloop.webp": "47515f341f496d159dc99a70fe3c7e97721e19e6",
-  "img/blobs/ThunderGoo.webp": "389d17d6f7e02936e9cba0946607472a9c10f6cc",
-  "img/blobs/VoidEmperorJr.webp": "8f8214e6ecd88f615b0853a1c19893963cfa60e1",
-  "img/blobs/VoidGobbler.webp": "1e435c40526386f978ddf707f60d30ef1a067670",
-  "img/hero.webp": "110de6bbd39da095244e5bf62a5f1b17e3f58d7c",
-  "img/icon-512.png": "18d0b3b214407cd721ece8a32cbe147068051e74",
-  "img/kit/blob-cloud-puff.png": "119e3f52823c50b60b04688a3da7e6e8d7c809e2",
-  "img/kit/blob-dragon-drip.png": "4670797ec1a548b1e133f1784b1928ec9ef6e763",
-  "img/kit/blob-fairy-fizz.png": "061561856afe56e75794de930c5348148bf15c6c",
-  "img/kit/blob-golden-goo-god.png": "0f098338a4b647e2c5a4918687cf6f1db39a8ccf",
-  "img/kit/blob-king-wobble.png": "7f6f195bdac3587d6ecfe7fb778dc17f065aea14",
-  "img/kit/blob-kraken-queen-jr.png": "b36fdf93c0bb8f72d2d1c29fc055984d84e3b0b5",
-  "img/kit/blob-ocean-overlord.png": "552c5acf819e0f5c4963e99c2d0639e12a187510",
-  "img/kit/blob-pearl-princess.png": "0a5edc107d81c03e9dc9e89ef87c37ff0f62c361",
-  "img/kit/steal-a-blob-lineup.png": "2c002250ad5a9c661efc827b73696c77d794c17b",
+  "img/blobs/AuroraAngel.webp": "7c8ff45e4a9bb25dd2436edf9df7b0cb05d322f5",
+  "img/blobs/BlackHoleBlob.webp": "a4b59458b512bb3b2d1181893fe95f251838c7eb",
+  "img/blobs/BlizzardBaron.webp": "c42ac3de836071cc68d2d37cb544874656a7f106",
+  "img/blobs/BowBow.webp": "16b90ccb91f9ff3366febf5368d5c7ec7f0b3453",
+  "img/blobs/BubbleJelly.webp": "4ff576eabe08d4f25a0dc6dad9cacfb68a688d1c",
+  "img/blobs/BubblegumBaron.webp": "8bfcf437301c0eb887b0a38034191d0a748b6864",
+  "img/blobs/Bubbleguts.webp": "7f8436e0738154f2e760d2d4deb5c5d0ce13ce99",
+  "img/blobs/CactusCutie.webp": "005185cb7e424b25acab63221cc0e2f0e6814d1c",
+  "img/blobs/CaptainBarnacle.webp": "55a15a8bc9f4d400815a134c0a3030b68c4ee05a",
+  "img/blobs/CaptainSplat.webp": "fed88b4a4adcbaf5213feaef5213d699a15cc0ee",
+  "img/blobs/CloudPuff.webp": "45b2d18f94ff2fd6f83b513b2507007a0c95ba6e",
+  "img/blobs/CometCruller.webp": "61fad0920101b7aa9073abd9eb9b7c329aba8268",
+  "img/blobs/CoolCucumber.webp": "7a5ccd637fd577ba45b8119ee7169ac4756aca3d",
+  "img/blobs/CosmicCreator.webp": "2eee6c1508c47f9881a654c9ded5cf32bb271ac8",
+  "img/blobs/CottonCandyCloud.webp": "e21482065da266f15894a875ca59e2b5d7cf85af",
+  "img/blobs/CountBlobula.webp": "b0cc1d686c591e1d7738a3f2a0657ffc403e1734",
+  "img/blobs/CrystalGloop.webp": "a435df02ecada03753ab06c8b0ed70c20b2a91f3",
+  "img/blobs/DiamondDrizzle.webp": "ab6f729f4fc4e21871bc0c3093c0daab677cfb29",
+  "img/blobs/DragonDrip.webp": "2d857093bf14533be5951f4fa3cfcd18311d9e75",
+  "img/blobs/EmberBlob.webp": "577fc8ffac8b9a6f89cceb0985576cf52e80c2a5",
+  "img/blobs/FairyFizz.webp": "9625333d04b521334e990aa9612a5592e745d814",
+  "img/blobs/FairyRingleader.webp": "25c5c6da933aa276970450bd45d5b19dec63fe93",
+  "img/blobs/Fizzlewump.webp": "4d1301c00b289e5216871b7de351c9c7a91db5f8",
+  "img/blobs/Frankengoo.webp": "64dcbdbf5e5fbb0b81579b1f416817f2e6e90f90",
+  "img/blobs/FrostGiantJr.webp": "ebcb8858287871c68e70fe799d955783113d32c5",
+  "img/blobs/FrostbiteFred.webp": "8766430a05a515b0ae01b7b93a89435136db1998",
+  "img/blobs/FrostyFlake.webp": "81fc900b154a8a5b28e438668c2155e123e5a48b",
+  "img/blobs/FungusRexJr.webp": "bd07ca59e25df82c6d9d4ea7bc102496fedae0c8",
+  "img/blobs/GalaxyGulp.webp": "0d523bae63711619dcf18e333c139d3c9efdfceb",
+  "img/blobs/GlacierGulp.webp": "d6edb33d090589735f0732897dcaaadcb85da7ef",
+  "img/blobs/Gloopster.webp": "b99055198a6d523037c384a50d6fe9cfb445368b",
+  "img/blobs/GlowcapGloop.webp": "0ab80159c0d4144f2ef77c7cd92ebee18f4aaa9d",
+  "img/blobs/GoldenGooGod.webp": "82a452eea08574ddb148a8613f8b469ef79e5b41",
+  "img/blobs/GummyGlob.webp": "20e97b00f5a8acf8d20ec9522952a5f3004f98c6",
+  "img/blobs/HumptyCamel.webp": "65695676d5bfa8fb510dd0477cf59851d92b73f0",
+  "img/blobs/InfernoKing.webp": "a273815cc460cf266266ef7c943c11597e835a00",
+  "img/blobs/JellybeanJr.webp": "c93534d6383069eb5b46bb540b79300869e42ff1",
+  "img/blobs/KingWobble.webp": "b96200da02c93728154aa7ccb8f6d199d0b1de72",
+  "img/blobs/KrakenQueenJr.webp": "620837f8461d3fb3bcc2c4f1346cbb2a08ebfa21",
+  "img/blobs/LavaLump.webp": "e0ca45a4e68ab18030251d1348ea7d4953e9c9fc",
+  "img/blobs/LilTruffle.webp": "1f267a28054d3e5f6fad6f48b88866bd6b0e02e9",
+  "img/blobs/LollipopLord.webp": "27d0e576b5654b52ddeedf1056acf1de14825768",
+  "img/blobs/MagmaMunch.webp": "83e29d06c04218556baf6c32242eb110f8336e3f",
+  "img/blobs/MagmaTitanJr.webp": "cd6e05fcad978c587acd6a149e6161547e73a964",
+  "img/blobs/Marshmallord.webp": "49ec961b5068a63080c3b6d64090052e7a9675d0",
+  "img/blobs/MechaGlob.webp": "d1b204c1a11c5a298076ce36f02475ca6af02c49",
+  "img/blobs/MiniMummy.webp": "7fde116505841927b31cd02b8c6b8b8032e8ec4a",
+  "img/blobs/MoonMochi.webp": "a4c9e85719904554dc95e200ed1a771a704eb676",
+  "img/blobs/Mossy.webp": "0054b368950a430c46d8eebaf39db932ad4d0773",
+  "img/blobs/MummyMush.webp": "4246dfe92bcb47823a4164788d7ecd3cbb400904",
+  "img/blobs/MyceliumMonarch.webp": "a84b54073d19dee62e8355738998790aa06b063a",
+  "img/blobs/NebulaNomad.webp": "79b69510cadff7604b01d4d4117a2ddae01c2fe3",
+  "img/blobs/NebulaNugget.webp": "96a33d33c6384dc21fc580d0d50393016d881086",
+  "img/blobs/NeonNoodle.webp": "26e45b0ea5b957b8e4b467634622f77f4685902a",
+  "img/blobs/NerdyGel.webp": "1900d402c14849483e00fef1a850379dc33318e8",
+  "img/blobs/ObsidianOoze.webp": "4b39a4f8dd9bfc0d0a5640b0447abf360be9deeb",
+  "img/blobs/OceanOverlord.webp": "18813dd7579bf47326c5db7e3edddc22d7ab6a3d",
+  "img/blobs/Omniblob.webp": "fb4eb6de9e75f4918477d2a9b74028d9940d36d0",
+  "img/blobs/PearlPrincess.webp": "c570dac542cdb245a99871aa1b07ef43cfe3dd11",
+  "img/blobs/PebblePal.webp": "71cd58bbcc01495fd1f811bfd5af6e76c732dcf9",
+  "img/blobs/PhantomOoze.webp": "ae0d224e4aa917772905bdc38ee47c17a6284d48",
+  "img/blobs/PharaohGloopJr.webp": "4b5a757c708df8e30f610b2ccbf72da2cfbcfa16",
+  "img/blobs/PlanetPudding.webp": "533f2227afe920d5067bbc45da4bddee25317ea0",
+  "img/blobs/PricklePal.webp": "6d0d325b4a2a9b58b01732dd13f4cc98cab1d5fd",
+  "img/blobs/PrismPudding.webp": "93c4edf33c282a279a86b78c6037f91963037eca",
+  "img/blobs/PuddleBlob.webp": "2aec12cb5ed2966c501632caa92492f8b204e49f",
+  "img/blobs/PuffballPip.webp": "b835c3963ce527b6c26f1fb1641bd46cd00e7a29",
+  "img/blobs/Pufferpop.webp": "3c42754b697578a6977d1e7e988a6ce36622d780",
+  "img/blobs/PumpkinPuff.webp": "39f553b53437579733bc9efd9e86246d3a63827a",
+  "img/blobs/QuasarQueen.webp": "8758e5432cd08a2b78a14a2106dd4c413bd6ccf1",
+  "img/blobs/RainbowRoyale.webp": "7b20937c1a4a7e068c6bbf4672de98c050f6c31e",
+  "img/blobs/SandcastleSam.webp": "3878d9d505f1bfbe9334a83e6010500be4fd9d1e",
+  "img/blobs/ScarabSparkle.webp": "ecaa242f2d13015200ae885f7ee40355353a15e4",
+  "img/blobs/SirSlimealot.webp": "23ffe0665f3862f635cea0526d7b1b073aa5112c",
+  "img/blobs/SirSquish.webp": "dd6ebeaa580c07cc39d8fce4abd65cfba4394e3b",
+  "img/blobs/SphinxSupreme.webp": "a20fbf0a0b56b9ca3b983a9a95ae4a1c9a3f15e0",
+  "img/blobs/SpiderSplat.webp": "4d8911d4ff4a4367f5eadb4a2e9699ab81264b23",
+  "img/blobs/Sproutling.webp": "b32d918bebe614ed7a3e6a07c2b81a6d4608f0f2",
+  "img/blobs/StarSlime.webp": "b3c90e6bd71d3c62010611a4efd8b1b6a02d9b3b",
+  "img/blobs/StarlightSquish.webp": "9f04fe70b8bd69e3f9072005c07d62009d4d8ecb",
+  "img/blobs/SugarKingJr.webp": "668f9a588a8c16bdd11da4548ff6b8734627c9c5",
+  "img/blobs/SugarRushSupreme.webp": "78e6a2f01997cad76c430f48de6b2659f1d5b09c",
+  "img/blobs/SunnySeraph.webp": "b36a7817228d7bb3890b77e81e801df6f8ba8879",
+  "img/blobs/SupernovaSlime.webp": "5c23870e3337eb9cf1272cf2ece71db971555529",
+  "img/blobs/TheGreatGloop.webp": "39ddf4e5204743f090024dfd3c476ddbf74d6ff6",
+  "img/blobs/ThunderGoo.webp": "2951cac6402a0b34712769be29c794fcb65da60a",
+  "img/blobs/ToadstoolTot.webp": "e45b91d1f6ab08b82da82ad58560c7513f0cc58a",
+  "img/blobs/VoidEmperorJr.webp": "25191131cc09bf2b5a97f449fa5fb0d5e23e0a49",
+  "img/blobs/VoidGobbler.webp": "f476d7d82be7ff05337eba66d88d231fcc9e113f",
+  "img/hero/CloudPuff.webp": "e64a754d4fcbcc1517fb65d658699515252984ce",
+  "img/hero/DragonDrip.webp": "47f6d0869e7eba36037f60d40bd6a5905ffb0114",
+  "img/hero/FairyFizz.webp": "3305f53ab782cc8747e330474c3d315f52ddd763",
+  "img/hero/KingWobble.webp": "e03f291577ba4cd2d82a42d40626728b773d31cd",
+  "img/hero/PumpkinPuff.webp": "afe8a1a37d7f294f22901494f6ab57a7ba02cec0",
+  "img/icon-512.png": "e607942ca2f76bc5a3d5b23bff48c11d37491d23",
+  "img/kit/blob-cloud-puff.png": "513ddf5f30c1ef74b90c083210b6b238a89d7fb6",
+  "img/kit/blob-dragon-drip.png": "6f6fba743776d13f03a8b84fef90ee63b70a5573",
+  "img/kit/blob-fairy-fizz.png": "a2a46296ca69df079cb3233d54c3f8519a931c0e",
+  "img/kit/blob-golden-goo-god.png": "d252617413a502465176ca0cd3a7fe04da7ce34b",
+  "img/kit/blob-king-wobble.png": "d2ca6414baf7c3c117f53da95fdbf2392becc8a3",
+  "img/kit/blob-pharaoh-gloop-jr.png": "1ec948889c22100dde46731744e5863d0804768a",
+  "img/kit/blob-scarab-sparkle.png": "355d2e6447fb4d87a1f9ed06474f3db94270d711",
+  "img/kit/blob-sphinx-supreme.png": "f29f597351018ac3a12da97b3c88ff4a7820edd0",
+  "img/kit/steal-a-blob-lineup.png": "45a3b90142eee85f0daa806cb07814d83cb4a2e4",
   "img/kit/steal-a-blob-logo.png": "decc97e645a71ee3ac34e891b7d1e630514875d2",
   "img/kit/steal-a-blob-roblox-icon.png": "47a80037bfb47fad052fc479c74091cedc95f64a",
-  "img/mut/Diamond.webp": "fad5a08bc85c8eb1cdbde6a2372c85aa83d62a29",
-  "img/mut/Frozen.webp": "ee61ef26ed61f458bde9a8d7fda61416e9bba4da",
-  "img/mut/Galaxy.webp": "e3b58734b502755ced06e8aa107a96a4ebc51151",
-  "img/mut/Gold.webp": "73c48812d516ef2fd5441610af527ef87bec779b",
-  "img/mut/Molten.webp": "766eac24173eb23793f6172dfaacd2a526634824",
-  "img/mut/Neon.webp": "d9022c4380457ee6e8c5814931f580654c8a3dcc",
-  "img/mut/None.webp": "7ca4df4b6fcdd9661c99b18e142e63e8098cbcd9",
-  "img/mut/Rainbow.webp": "ed4cb7241fc692ca4d296970695bde503a48e1e6",
-  "img/mut/Shadow.webp": "d50309898cfea807c87d57d6438d29716b29a1e5",
-  "img/mut/Silver.webp": "377a250a840877a2be608eaf2bc5ca05f62436aa",
-  "img/og/blobs/aurora-angel.jpg": "b2f50951a2a31b40fc30f18e084c700d8333afbd",
-  "img/og/blobs/black-hole-blob.jpg": "6c80b5a837efa65d09448a3e86e6a0d0b1026d7d",
-  "img/og/blobs/blizzard-baron.jpg": "394ecc96364020e1f5007ff12936589ff5f27682",
-  "img/og/blobs/bow-bow.jpg": "56fcf1731eb6b862935322934776642fa53cf6c8",
-  "img/og/blobs/bubble-jelly.jpg": "f83b3f0d1416df41e98db1693f6310047f94ec1c",
-  "img/og/blobs/bubblegum-baron.jpg": "cdeb10e940561da5500060035637d8202d5ee1bb",
-  "img/og/blobs/bubbleguts.jpg": "64f1d1fec68144c152fdb3544578eb0232857209",
-  "img/og/blobs/cactus-cutie.jpg": "33c83bbf6319058aa9b9b7a1c40e7b2532424f84",
-  "img/og/blobs/captain-barnacle.jpg": "b900cb68c1d41b95b490452efa30f8172cecf194",
-  "img/og/blobs/captain-splat.jpg": "8f6904743996978cc4a5c59e71fb85258846fcf5",
-  "img/og/blobs/cloud-puff.jpg": "a224c9af7e99d929f7dea40af661bba3ac190902",
-  "img/og/blobs/comet-cruller.jpg": "ee2491a5560b9f60ea3b86b1d3797bf5000e482e",
-  "img/og/blobs/cool-cucumber.jpg": "d423cb09dbb7767c6b2b71189529bc12308cb488",
-  "img/og/blobs/cosmic-creator.jpg": "c7d2f8b20593858eaca76f7fa76ebb84e51b65c3",
-  "img/og/blobs/cotton-candy-cloud.jpg": "adf141330cd635f66028d8bddd3c365d8ba3f834",
-  "img/og/blobs/count-blobula.jpg": "bcc2bb99e6281f43190ffe53c3deb49e73298a0e",
-  "img/og/blobs/crystal-gloop.jpg": "1124938bbbb6dd4b1992941edf6425b6347df419",
-  "img/og/blobs/diamond-drizzle.jpg": "3fa985c1fb9b0457348ea7c7fc2cd2cdd3d93841",
-  "img/og/blobs/dragon-drip.jpg": "501f2835e1f6b2631cc6ded4447fa85bce9a516b",
-  "img/og/blobs/ember-blob.jpg": "19c81ef14a08b264ea1cc0220bf3326cf3af592f",
-  "img/og/blobs/fairy-fizz.jpg": "728bb6409f2ed550332ccdc88c18f0cd7e9cbdf6",
-  "img/og/blobs/fizzlewump.jpg": "14642c69c479dd676da491e05e658f55442d4df8",
-  "img/og/blobs/frankengoo.jpg": "ae001ec2a92a725b7b5534ac752bbfc9895d2be2",
-  "img/og/blobs/frost-giant-jr.jpg": "1dc2a5b5e20dec35db92edd2883d8e6a3bc3e732",
-  "img/og/blobs/frostbite-fred.jpg": "a1ad7757e8548a61bf3e2576487ab8bc808a2ae9",
-  "img/og/blobs/frosty-flake.jpg": "dc8af981ca91ca4a7d3771e0e0336739917d52df",
-  "img/og/blobs/galaxy-gulp.jpg": "d248d774b05f13a1155f4031ece207803186b128",
-  "img/og/blobs/glacier-gulp.jpg": "312d62d542b93885c77b0ec062f035e2a8bfd1e4",
-  "img/og/blobs/gloopster.jpg": "772738d1042d1a8c66c11329526fc61fa8be8479",
-  "img/og/blobs/golden-goo-god.jpg": "b6ee08470a221dcad0d67bcd27d59400522aad6b",
-  "img/og/blobs/gummy-glob.jpg": "b65539b8418879461b6db71ef04b66cc42ed47b5",
-  "img/og/blobs/inferno-king.jpg": "ad6105452a1aec941a0c0375647f0fa38e3f09e4",
-  "img/og/blobs/jellybean-jr.jpg": "545491ffa9758c3540e53493f19cfa46ca88230f",
-  "img/og/blobs/king-wobble.jpg": "cc01146809f227a94863c0d9e6af11086e6f1bfa",
-  "img/og/blobs/kraken-queen-jr.jpg": "669e568e4279647ca18089a7a1597c5ebe654e3f",
-  "img/og/blobs/lava-lump.jpg": "d0e5864bb52b0a26ae1c8a157467ccafe1124218",
-  "img/og/blobs/lollipop-lord.jpg": "54c9c08ba2f33ab59fddbfaa7ec745a84c98ec91",
-  "img/og/blobs/magma-munch.jpg": "94ceab10156f296f768d30f11668ffd391b321b9",
-  "img/og/blobs/magma-titan-jr.jpg": "6786ec2b35dfc21cda1d6aa55b696665f10fa652",
-  "img/og/blobs/marshmallord.jpg": "c91b5d8c43a46e29c250dfe880b3bb8517aa0fee",
-  "img/og/blobs/mecha-glob.jpg": "959c2b5698bafa4889aef783921c877cb6491b1f",
-  "img/og/blobs/moon-mochi.jpg": "fb6f58b95e02e4e9f1dd85a17c90dd8e031f8540",
-  "img/og/blobs/mossy.jpg": "681d3cd053d31786b580ede0fe44ccaaa73cc624",
-  "img/og/blobs/mummy-mush.jpg": "e72bb207a2393698b54ead28434875a3c8a51c6e",
-  "img/og/blobs/nebula-nomad.jpg": "6cd18eee22c8ced5444e79e8b116a0b1c0b9c136",
-  "img/og/blobs/nebula-nugget.jpg": "aee1edf368ef8d0d0546e936f0e39fb40096c8fa",
-  "img/og/blobs/neon-noodle.jpg": "6a24b8e014a8c337af0287766074a5b55af6b220",
-  "img/og/blobs/nerdy-gel.jpg": "c9549595b22503a54e89144df3eb58ed30e4ed52",
-  "img/og/blobs/obsidian-ooze.jpg": "2bf65b9a3e73f76eaf1f791266be254cb565c3fd",
-  "img/og/blobs/ocean-overlord.jpg": "8c740407a5e2915c04f10e190c2edee554f494cf",
-  "img/og/blobs/omniblob.jpg": "2698fdb3f67a659041af5e6a425483f1dd1a9b7f",
-  "img/og/blobs/pearl-princess.jpg": "25a1be286c6e1963b41901c31368b4d178950c42",
-  "img/og/blobs/pebble-pal.jpg": "0895629b2a0e053d5b161182dd6dece9dfd67952",
-  "img/og/blobs/phantom-ooze.jpg": "85e005ed217a2253316c6b36e744eeb4541c254c",
-  "img/og/blobs/planet-pudding.jpg": "a5f6b47242bcca35b9552e2c256c69f5aa699cf8",
-  "img/og/blobs/prism-pudding.jpg": "bafc10fd4b23e824df9c0ae01001eec840f187fd",
-  "img/og/blobs/puddle-blob.jpg": "266007853e0620d89a16e67e564282f91575ffa7",
-  "img/og/blobs/pufferpop.jpg": "982446b8204233f33f3ccd1c2f547e5883620cbd",
-  "img/og/blobs/pumpkin-puff.jpg": "3977eeaaa1c1677b92f310928b935de2199946fc",
-  "img/og/blobs/quasar-queen.jpg": "608e9f61a856620b7f023c9a82921560c87df835",
-  "img/og/blobs/rainbow-royale.jpg": "6e59cf2eef604c4f47c55c1caffde10645550011",
-  "img/og/blobs/sir-slimealot.jpg": "4e2639667f8d2757d72e27a4a029dfed4f6daf17",
-  "img/og/blobs/sir-squish.jpg": "108bdbd5bdd9fff0f0b9f1d7f3f3b8ac833aaaac",
-  "img/og/blobs/spider-splat.jpg": "879a98eff20bfbaa3c97982688afbcc7cebaf68a",
-  "img/og/blobs/sproutling.jpg": "9ce259fc36bfc62f504d7fe3f911b9f0dcc66089",
-  "img/og/blobs/star-slime.jpg": "c676a9a20e0efb88f34b747ab69c18e1c3c8f46f",
-  "img/og/blobs/starlight-squish.jpg": "b0328b48c365fd1a00092779a4d2f3fbf9b38a23",
-  "img/og/blobs/sugar-king-jr.jpg": "3ee0ded73d3a0855c857315117e92f5c2e2371e3",
-  "img/og/blobs/sugar-rush-supreme.jpg": "0d147bf7381ff89a53daf1bc4638706d0a806394",
-  "img/og/blobs/sunny-seraph.jpg": "bda5fef1a42888b40202e5603659e808bea42af6",
-  "img/og/blobs/supernova-slime.jpg": "99015bf5dfa7b3f67d0a95e00224d517d85418cd",
-  "img/og/blobs/the-great-gloop.jpg": "c18b14fd1703bb8273e1145ac02096c287d7642c",
-  "img/og/blobs/thunder-goo.jpg": "a3d5758130d9a44109a7a78d59331c4b9093b4fb",
-  "img/og/blobs/void-emperor-jr.jpg": "1bdcef587b76e819f613c0b9137ab27094723788",
-  "img/og/blobs/void-gobbler.jpg": "c13ed2829f34891abbb771e3b933aea6eaf2b2ca",
-  "img/og/codes.jpg": "7933215f7c1c9fe5152de4e6c399004f4f426eec",
-  "img/og/creators.jpg": "ee99478af67d50d7af29e5e2e042d8312deb7219",
-  "img/og/eggs.jpg": "a40c685426e3cdb7826aefcf585b0470ea8410fc",
-  "img/og/events.jpg": "5eb37e04d3f50388b4925071333c97b4357e3894",
-  "img/og/galaxy.jpg": "522fec39cfb75c6b58eb3da7c1c0ef2f496c8b8c",
-  "img/og/guide.jpg": "8f1f7073a649ff3c2f7dd4b5af31aed353be8c24",
-  "img/og/leaderboards.jpg": "c6b5affbbd8d0965f9e2f52333ec6bc77237226c",
-  "img/og/mutations.jpg": "0482a765b0e6b8f5fd911c80b7f622e8daf7e613",
-  "img/og/players.jpg": "1b29cba77e81aa57f11ee84125f9f413346f38ce",
-  "img/og/quiz.jpg": "1476382bf0aa071242cebb35354c268c06288d8f",
-  "img/og/rich.jpg": "351d2ce39d23fb148e4a69bd64758c1330a759e6",
-  "img/og/seasons.jpg": "757623378787367b5d3aa04460fe4fe3d40c1f5e",
-  "img/og/similar.jpg": "33d75dd519283144462c4fdcd6b0fd7938272503",
-  "img/og/tiers.jpg": "cec32d84b502d266b8a270607e91d8d19305f63b",
-  "img/og/trade.jpg": "427d52419ac8ff7a219baddf2954b94793b7d65a",
-  "img/og/updates.jpg": "5fe555cee5b3809632721344ae2711dab61625c8",
-  "img/og/values.jpg": "007c9a7a85a702f49a1549d5396a3d7a326739d6",
+  "img/mut/Candy.webp": "ba241a920ed6bb801d830c9cebe1b8466a8e0742",
+  "img/mut/Diamond.webp": "3a163dcdae9dc1b0f82ebcad1b2a3515437a27d7",
+  "img/mut/Electric.webp": "a509aaf0554bb3da9a36e768d1404aa2ac992f43",
+  "img/mut/Frozen.webp": "db2d5e69079c317ac0dedae927c0c530bc23167c",
+  "img/mut/Galaxy.webp": "be7ce930e55eba09a8f064603eac0775f6c38069",
+  "img/mut/Ghost.webp": "a3126f6c5ae5fc0ec75397e585f5c9cbc7c23029",
+  "img/mut/Gold.webp": "5b32407ac66ac8eb3235e3d7ed5355c9685fff60",
+  "img/mut/Molten.webp": "45b4957611d616d86875e9ad9de861add2a958f5",
+  "img/mut/Neon.webp": "067cd5e846b758143685124aed9bc23ddd12928f",
+  "img/mut/None.webp": "8d257759fdd31c264374fe1447abe4b480e20c7e",
+  "img/mut/Rainbow.webp": "1d7336408fab80738f5bd6658d99473534a0d1c5",
+  "img/mut/Shadow.webp": "84f89a2af3f442efbf16b9a1ed64a00ccbbbdfbb",
+  "img/mut/Silver.webp": "308c84af07120f32b445dc1d6f6f6d6a17405899",
+  "img/og/beginner.jpg": "7c16dee25ef6226eadea86f8ae46ff2a47a0e957",
+  "img/og/blobs/aurora-angel.jpg": "bda969781da2aa1fb06c9845184e072eb7e56228",
+  "img/og/blobs/black-hole-blob.jpg": "889412ff14a840b93addfacbc2203483a6c7613c",
+  "img/og/blobs/blizzard-baron.jpg": "2627e6fb71158788e0c59488aec31d18ca54614b",
+  "img/og/blobs/bow-bow.jpg": "44be857d05ac4639478fb0703e5313972f0c340b",
+  "img/og/blobs/bubble-jelly.jpg": "51dfad3ec73eacc9fa49414096a1c41efd7f4ab3",
+  "img/og/blobs/bubblegum-baron.jpg": "0d18556f7d7e5786a9e224e1b11de198a5c6bd17",
+  "img/og/blobs/bubbleguts.jpg": "dca6af984b1f6a39cc4d9ca22de1f54e5a42a4a4",
+  "img/og/blobs/cactus-cutie.jpg": "a31b2e98df09554f2eaa0b848d7ed4fd51e36815",
+  "img/og/blobs/captain-barnacle.jpg": "ee8024b011f86e6269339303dbc064573e85c139",
+  "img/og/blobs/captain-splat.jpg": "ff8b0072a7fee43d09fc06758fb3c1bc5301a52a",
+  "img/og/blobs/cloud-puff.jpg": "92208ae42c01e3164022db23b41fcf4d3e56d1a1",
+  "img/og/blobs/comet-cruller.jpg": "214afa28342e7dd0d33d5133136b9e520fe6d6f7",
+  "img/og/blobs/cool-cucumber.jpg": "39d6d94d648584c1c9b20f5b05f5282f921cc392",
+  "img/og/blobs/cosmic-creator.jpg": "86bb8b4922daa3e9cbc40270541d1a60f97098d3",
+  "img/og/blobs/cotton-candy-cloud.jpg": "564e0482f7a21ebab2e0596bc26646ac09ae95b0",
+  "img/og/blobs/count-blobula.jpg": "1e9faf53365e636cfced1fdcb98d91bb940d5cfa",
+  "img/og/blobs/crystal-gloop.jpg": "cf15a877a459b07d29919c7d14361559a608b8e9",
+  "img/og/blobs/diamond-drizzle.jpg": "0da85df4ee214b975c04452cce73380c26684838",
+  "img/og/blobs/dragon-drip.jpg": "a765fdc78e919bff40ff9b89c54383016af6af31",
+  "img/og/blobs/ember-blob.jpg": "6076c819cd3764d0ac7edb7d67f959ae5257d559",
+  "img/og/blobs/fairy-fizz.jpg": "806359bfc1548a1c57bc8781ed2d8ccdfb7f9600",
+  "img/og/blobs/fairy-ringleader.jpg": "aae4a695dda5df318dafe4116eddf6445944d21f",
+  "img/og/blobs/fizzlewump.jpg": "c5606f1a39042460e704d4bceaf90287e05b0bd0",
+  "img/og/blobs/frankengoo.jpg": "de06c9ddeb4ece9d59cc4db2be6ebc0869a9d801",
+  "img/og/blobs/frost-giant-jr.jpg": "91d983b4b3c3511ad0de6e0c63a21ef9a94f28a0",
+  "img/og/blobs/frostbite-fred.jpg": "85c8aa5af9c5594bd8db79a1865ee9ae986f0dc9",
+  "img/og/blobs/frosty-flake.jpg": "3bb05ceff4a33e0ba62d4b406613439c3b7ab9c3",
+  "img/og/blobs/fungus-rex-jr.jpg": "afb77a95b4696592946aae0cf840d5be45addc2c",
+  "img/og/blobs/galaxy-gulp.jpg": "a61e444978bb47cc84555d96840896f342fe8155",
+  "img/og/blobs/glacier-gulp.jpg": "cb918242e48239ce4dd526cbd86e20890c0ef595",
+  "img/og/blobs/gloopster.jpg": "924f47ab222dffe00cdcb1d93a244711b87bc994",
+  "img/og/blobs/glowcap-gloop.jpg": "61b66bb608aa527ab4bcc027c4a4bb76ad87c131",
+  "img/og/blobs/golden-goo-god.jpg": "d7dee2ae9d20d79e0923cbae390b4b689f3b0ad2",
+  "img/og/blobs/gummy-glob.jpg": "9393bbbf3bc5c0394a51f00fb03d9ab0041cc04f",
+  "img/og/blobs/humpty-camel.jpg": "8076cffc83243016c413a322f85fa262e34fd781",
+  "img/og/blobs/inferno-king.jpg": "105020d5571774233c0d8aa753aaf6a7d56ddc11",
+  "img/og/blobs/jellybean-jr.jpg": "0ea9185676d8b80ed4731528deb84b80fed5c4e9",
+  "img/og/blobs/king-wobble.jpg": "e09c2fef5ec1d930423de8204bec30f17dfd1f4a",
+  "img/og/blobs/kraken-queen-jr.jpg": "2b24bf128f955b72a7a373da03bb98ef99237de8",
+  "img/og/blobs/lava-lump.jpg": "367978fa697d46f88bd0d2fdf91f333c9eeba20c",
+  "img/og/blobs/lil-truffle.jpg": "4d4ef5af6ab100587d233f01c88d707819a42af3",
+  "img/og/blobs/lollipop-lord.jpg": "78dddabe4de1922e24e656e985159901307ea527",
+  "img/og/blobs/magma-munch.jpg": "f014e78ec580221b430a13073996719a53abdba0",
+  "img/og/blobs/magma-titan-jr.jpg": "ed0143e3fc7cc51e5c13ec51d69a7e17870e1727",
+  "img/og/blobs/marshmallord.jpg": "246d11cb21d86d02f058b7026dd19ce19f1572c1",
+  "img/og/blobs/mecha-glob.jpg": "1a4c470da700bb03ab464297650ddbe05234e772",
+  "img/og/blobs/mini-mummy.jpg": "e7e33a6e36aee3707956cd5294cb1a8134abc7cc",
+  "img/og/blobs/moon-mochi.jpg": "78dc09d3a7ac82a175f29a411f73b5386213f437",
+  "img/og/blobs/mossy.jpg": "b53da5babe14cbe1cf863d5f62ebb4b8137229e7",
+  "img/og/blobs/mummy-mush.jpg": "a29fa5677c69daecccd3cd786c86b60dd2ab405f",
+  "img/og/blobs/mycelium-monarch.jpg": "94d882655735cbfcf771844dca489ef4bc0ddf7e",
+  "img/og/blobs/nebula-nomad.jpg": "8a1059287abae088f0603a3b5a98638f42dd29f9",
+  "img/og/blobs/nebula-nugget.jpg": "7eb7303225a12170bd76f3acaf537306ed75ca97",
+  "img/og/blobs/neon-noodle.jpg": "dd0f72d2126e03bc9f7fbcdbb575d635f66acd7e",
+  "img/og/blobs/nerdy-gel.jpg": "3796723dd41b523d30115c3d40332c15cc481c50",
+  "img/og/blobs/obsidian-ooze.jpg": "1492baa75e48d8892cf1ebc587ea06000567c570",
+  "img/og/blobs/ocean-overlord.jpg": "539573257f7eebb481cdf934fe3f85206fad77a7",
+  "img/og/blobs/omniblob.jpg": "a627d77dbba08e2e9420a9a8205ae965f265b2d5",
+  "img/og/blobs/pearl-princess.jpg": "15289c731fe69191732c79e0634904bb1138fd0b",
+  "img/og/blobs/pebble-pal.jpg": "7bff91aa7d344da0463216e8bbacbcc835fba9d8",
+  "img/og/blobs/phantom-ooze.jpg": "2607168688b2ce93031072fbba6535f142b04187",
+  "img/og/blobs/pharaoh-gloop-jr.jpg": "d8e4466a5fa7ca73a2c4b557effb58c55b5878b7",
+  "img/og/blobs/planet-pudding.jpg": "4aa935ec08599698271842297764648868d4c642",
+  "img/og/blobs/prickle-pal.jpg": "01edcf5a3d45ab8695ca562dafcbadbe78cde67c",
+  "img/og/blobs/prism-pudding.jpg": "9fb521eec8d3e235e89d7795076c79e4c9c1a26e",
+  "img/og/blobs/puddle-blob.jpg": "b8650998b443c02ef9821c06d8e368c45f93bec2",
+  "img/og/blobs/puffball-pip.jpg": "45dee7db105f09e6ba5e923e47ce9e473069db87",
+  "img/og/blobs/pufferpop.jpg": "45abd3eb390bc495e95975c26a3d97462f8289b8",
+  "img/og/blobs/pumpkin-puff.jpg": "d7f8119f5e7c6602dccddaac2e0b510ea148543c",
+  "img/og/blobs/quasar-queen.jpg": "c674f02739461bc03719ff57ee1f627f701719ab",
+  "img/og/blobs/rainbow-royale.jpg": "db74aac88a581b516824207c652a00b04f05409a",
+  "img/og/blobs/sandcastle-sam.jpg": "03e4aece1af11f3b4fe99487d3bc0111026a9f6f",
+  "img/og/blobs/scarab-sparkle.jpg": "1969cf9b8571d63d1f07969823a6b1c614ae0398",
+  "img/og/blobs/sir-slimealot.jpg": "84502e6aaf17bae8b42ebb2e3f4a9454d85754f0",
+  "img/og/blobs/sir-squish.jpg": "664bcf249d74048d4479ddd79ff89eb4aa15163b",
+  "img/og/blobs/sphinx-supreme.jpg": "4ce6c60f769b1fec5b562b51a02cab9ce26fac87",
+  "img/og/blobs/spider-splat.jpg": "66ef8a08027054ef5817a4663611e59d23466c89",
+  "img/og/blobs/sproutling.jpg": "b265b09a65ea9e4ec4c2ecf998068be10fe1f200",
+  "img/og/blobs/star-slime.jpg": "5bebc3ebf0d10e4dac5bc633f2008fe3b4a2c42e",
+  "img/og/blobs/starlight-squish.jpg": "79bc52ee427a60d19eccd0ca14233a959ed88e9e",
+  "img/og/blobs/sugar-king-jr.jpg": "f47aa2063bb7580f850e24034578ff571068e21a",
+  "img/og/blobs/sugar-rush-supreme.jpg": "c982b62a071c2cb0fdbdae661c83e474d0d8d7d5",
+  "img/og/blobs/sunny-seraph.jpg": "cee302991a3a7667f88bd28ed6b59b73bf77ffcb",
+  "img/og/blobs/supernova-slime.jpg": "fce64215c12d7e74b33adbf8359c1e8da35317d2",
+  "img/og/blobs/the-great-gloop.jpg": "e6189b5ac89976f27c2a148220ae431884caefbb",
+  "img/og/blobs/thunder-goo.jpg": "188a802fbc5f90eac2381acd525fb5e602d4404c",
+  "img/og/blobs/toadstool-tot.jpg": "fd9718b4d45264baf263a122015bfc11b20ed05d",
+  "img/og/blobs/void-emperor-jr.jpg": "c906781bfe285480980a86dc0002084f71abe313",
+  "img/og/blobs/void-gobbler.jpg": "e07a3fc267ff96f11c465a71c74e6c267a6e62f4",
+  "img/og/codes.jpg": "cfdeb3c2dc4e9c9a5ac320a2167f4f0ccfd16e73",
+  "img/og/creators.jpg": "9a93790c7b5ef11d28a2971602ead7f916e46d97",
+  "img/og/eggs.jpg": "3df6eb2d5133056b421b1c91b5d9507a537e26bb",
+  "img/og/events.jpg": "eb50c154f9d653f0aad2486889c1bafe8d88d9f6",
+  "img/og/faq.jpg": "95548faa0e24aca444115c5a55479e7462fef63b",
+  "img/og/galaxy.jpg": "c7422d631c9827f3448c99ca514886ca5dd63df1",
+  "img/og/gloves.jpg": "9f7f07374f1dd274c28ae732081dcfe09894e10c",
+  "img/og/guide.jpg": "037e10acbefc4ad1ad628bef5400e4a8b18f327a",
+  "img/og/leaderboards.jpg": "e61ff0da80e347141d300e53e2025eb7b04eca34",
+  "img/og/mutations.jpg": "2d22eda4f7bc70e3218abf06a2da8f1a67faf8c2",
+  "img/og/players.jpg": "8535c3409b3c965c16ed2774c7398b278e03fce8",
+  "img/og/quiz.jpg": "fd962dffb0782872f2b774b713629a8faf6a516f",
+  "img/og/rich.jpg": "91d01264fadac9be30a92e7910384faecc1abae0",
+  "img/og/seasons.jpg": "2e2849a5499b311a5a306c700bd309bdd5774a34",
+  "img/og/similar.jpg": "9d521ac1b16d3cf3308e43d46bdcdf6c202aaf4f",
+  "img/og/tiers.jpg": "d7fa0c62354caa70938e76a1f872d79900957458",
+  "img/og/trade.jpg": "ee2fb14f6e121f54f25ace9b9e5e487163597ac1",
+  "img/og/updates.jpg": "4adc6817b31f551286d18adb3f8a52a4f0ab44b4",
+  "img/og/values.jpg": "46a7480c0bf2afdd4571c72d3cb70ca07b94fe72",
   "img/og/wallpapers.jpg": "d17079af21b30dcb0f3246ec6c635bfa989f2f49",
-  "img/og/winterpass.jpg": "6c39106b2785861d9421e977581f2ac76a6dc3c8",
-  "img/soon/37f11db1afd2.webp": "616060ff2e94f51dc4f19aae0bba46535db96aa4",
-  "img/soon/3c3bd9f34e6c.webp": "544c390cee32a2ee87c9f18da512de8381f98fd1",
-  "img/soon/47a09b788216.webp": "668c4a7e9fd1d9d79c48df9bbbaf23162fcc73c0",
-  "img/soon/494cac26eead.webp": "c433ef13feda68747f72b9a8c7a22064abc72d85",
-  "img/soon/64dc5abd4193.webp": "184a8b6e9509789bc1f605b5d0eb8a7735460da9",
-  "img/soon/67003bffcb8c.webp": "128c8946abef9cbc6fe6df99fb4b938c58940988",
-  "img/soon/6c1c4534a077.webp": "c18fff2225e5ee6dd25909cb1074036899e09369",
-  "img/soon/75891b568e07.webp": "59f70ec13a3f0db8a3f53863a9be38009de2d9a6",
-  "img/soon/7627e2f21e99.webp": "d1086615077ca7b3a4d5ab5631ca118c7cafc1e4",
-  "img/soon/8be0c20d138d.webp": "389b0770be3e615883111347f1a84aa08f969ff8",
-  "img/soon/a591aa3096f0.webp": "75e35317356e360832a9bc10f235c599373a3560",
-  "img/soon/b4552adee2bc.webp": "ccc366dcbda1fbeeba180bfe65d220c67c302687",
-  "img/soon/cb30785da348.webp": "4e6197deea0b2919c657457ee3b991bbb91aa2c9",
-  "img/soon/f1904a5de0f7.webp": "65a70c3809af4077f8f5392b56542c523ba7f86d",
+  "img/og/winterpass.jpg": "b277ecf64d375ca7f49f8727b6af33e713c6d9bb",
+  "img/og/worlds.jpg": "e2f3248bb7f5f4543603764a8153aa94c96ff31c",
+  "img/soon/37f11db1afd2.webp": "f7f94ae7815cd8fabddb5305250b6751132d505c",
+  "img/soon/3c3bd9f34e6c.webp": "39c4f200f5e689701df6874aaf34aa1ed43b5c4c",
+  "img/soon/47a09b788216.webp": "c7216c29c0f9d5682bb8c1e96e603c771ef7e6c9",
+  "img/soon/494cac26eead.webp": "5bc874a3b9493be7f56926b5e163443dc4ca23ec",
+  "img/soon/64dc5abd4193.webp": "f2a1d513e0948ab493653a224d5f89f5d51cd28a",
+  "img/soon/67003bffcb8c.webp": "a9f9263b5538d609ec74c3fb242b238167d39635",
+  "img/soon/6c1c4534a077.webp": "a94ee5db87775b8bf03c1fd04620ac37891dcbc5",
+  "img/soon/75891b568e07.webp": "81571e0a257d98dc0fb72974548d49d6ee3f6eb0",
+  "img/soon/7627e2f21e99.webp": "590cd0edf50dd77c2da5aeedfaf35c50cdd034ea",
+  "img/soon/8be0c20d138d.webp": "9168b311b1e2bd2d7b2b7445b71908fe9202f024",
+  "img/soon/a591aa3096f0.webp": "322b8f37b056de46aa448177043f2ba47349c464",
+  "img/soon/b4552adee2bc.webp": "f7936bf0ed8f7a01f7532c0c6e1e75e914c28350",
+  "img/soon/cb30785da348.webp": "d26cad40bb65d2c8af602c96f773666c39b7dda9",
+  "img/soon/f1904a5de0f7.webp": "eb3450d9aba4a034b8bfd14f38b3744f93cbb988",
   "img/wallpapers/steal-a-blob-galaxy-blob-pc-preview.webp": "9e06ee662141b68a2708f523dcb0549ae3cb28bb",
   "img/wallpapers/steal-a-blob-galaxy-blob-pc.png": "09bfa692b1254ee8d8b9c72b5b609196095d95c3",
   "img/wallpapers/steal-a-blob-galaxy-blob-preview.webp": "96d2e4fd0a31260b3ee32c49d3090a0da5879ce0",
   "img/wallpapers/steal-a-blob-galaxy-blob.png": "2695dc73eab3a0d309f4ec9bfa6bbc7aae3bf4bd",
   "img/wallpapers/steal-a-blob-nine-mutations-preview.webp": "9aa12209672770b4951a702a41a113de564010ed",
   "img/wallpapers/steal-a-blob-nine-mutations.png": "77cf367268981d9434d6f666dd3583b994f5c39f",
-  "og.jpg": "1baaa19a52a08bc5bfcfcad71c4cac476b91ca1f"
+  "og.jpg": "ffbd1a948bd62e6c340af666d1d9b9fe306f01ff"
  }
 }
